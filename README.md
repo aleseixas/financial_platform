@@ -8,3 +8,4 @@ Our goal with this project is to create a open platform hosted on Github Pages t
 - Lucas Martiniano 231036
 - Alexandre Seixas 260355
 - João Guimarães 260542
+- Daniel da Cruz Vieira 260398
