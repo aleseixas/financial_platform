@@ -5,3 +5,4 @@ Our goal with this project is to create a open platform hosted on Github Pages t
 
 ### Developers Team
 - Gabriel Viterbo 217600
+- Lucas Martiniano 231036
