@@ -2,4 +2,4 @@
 * Gabriel (RA217600)
 * Daniel (RA260542)
 * Joao (RA260542)
-* Joao (RA260542)
+* ZEB (RA260542)
