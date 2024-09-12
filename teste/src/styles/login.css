@@ -18,7 +18,7 @@ p {
     /* background-repeat: no-repeat; */
     /* background-image: url('../Resources/logo.png'); */
     background-size: contain;
-    width: 20vw;
+    width: 50vw;
     height: auto;
     min-height: 250px;
     min-width: 250px;

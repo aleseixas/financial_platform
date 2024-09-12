@@ -1,0 +1,47 @@
+button {
+    font-size: 1.5vw;  
+}
+
+button:hover {
+    cursor:pointer;
+}
+
+.botaoEntrar {
+    background-color: #04043C;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    border-style: solid;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 100%;
+}
+
+.botaoEntrar:hover {
+    background: linear-gradient(to right, #04043C, #080879)
+}
+
+.botaoEsqueceuSenha {
+    background-color: transparent;
+    border-style: none;
+    width: 50%;
+    margin-top: 12px;
+    margin-bottom: 9px;
+    font-weight: bold;
+    color: #04043C;
+}
+
+.botaoCriarConta {
+    background-color: #14A586F7;
+    font-weight: bold;
+    color: white;
+    border-style: none;
+    border-radius: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.botaoCriarConta:hover {
+    background: linear-gradient(to right, #14A586F7, #3ad5b4f7)
+}

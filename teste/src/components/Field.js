@@ -1,7 +1,12 @@
 import React from 'react'
 import '../Styles/field.css'
 
-const Field = ( { type , fieldName, value, setValue} ) => {
+const placeholders = {
+    'email': 'Email',
+    'password': 'Senha'
+};
+
+const Field = ( { type, value, setValue } ) => {
     
     const handleChange = ( event ) => {
         setValue(event.target.value);
@@ -9,10 +14,9 @@ const Field = ( { type , fieldName, value, setValue} ) => {
 
     return (<div>
       <input className='field'
-        
           type={type} 
           onChange={handleChange} 
-          placeholder= {"Insira seu " + {fieldName}}
+          placeholder= {placeholders[type]}
           value={value}
       />
       <p>{value}</p>  

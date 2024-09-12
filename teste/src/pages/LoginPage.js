@@ -6,11 +6,14 @@ import Form from '../Components/Form'
 const LoginPage = () => {
   return (
     <div className='login'>
-        <img 
-            src={logo}
-            className='logo'
-            alt='logo'
-        />
+        <div>
+          <img 
+              src={logo}
+              className='logo'
+              alt='logo'
+          />
+        </div>
+        
         <Form />
     </div>
   )
