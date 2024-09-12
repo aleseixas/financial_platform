@@ -27,14 +27,14 @@ const Form = () => {
     return (
         <form onSubmit={handleSubmit}>
             <Field 
-                type={'email'}
-                fieldName={'email'}
+                type='email'
+                fieldName='email'
                 value = {email}
                 setValue={setEmail}
             />
 
             <Field 
-                type = {'password'}
+                type = 'password'
                 fieldName={'senha'}
                 value = {senha}
                 setValue={setSenha}
