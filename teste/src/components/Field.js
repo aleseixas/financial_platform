@@ -1,4 +1,5 @@
 import React from 'react'
+import '../Styles/field.css'
 
 const Field = ( { type , fieldName, value, setValue} ) => {
     
@@ -7,7 +8,8 @@ const Field = ( { type , fieldName, value, setValue} ) => {
     }
 
     return (<div>
-      <input 
+      <input className='field'
+        
           type={type} 
           onChange={handleChange} 
           placeholder= {"Insira seu " + {fieldName}}

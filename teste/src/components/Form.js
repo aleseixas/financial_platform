@@ -1,6 +1,7 @@
 import React from 'react'
 import Field from './Field'
 import Button from './Button'
+import '../Styles/form.css'
 
 const Form = () => {
     
@@ -25,7 +26,7 @@ const Form = () => {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className='form'>
             <Field 
                 type='email'
                 fieldName='email'
@@ -54,4 +55,4 @@ const Form = () => {
     )
 }
 
-export default Form
+export default Form;
