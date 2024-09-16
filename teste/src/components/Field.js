@@ -1,5 +1,5 @@
 import React from 'react'
-import '../Styles/field.css'
+import '../styles/field.css'
 
 const placeholders = {
     'email': 'Email',

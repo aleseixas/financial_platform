@@ -1,5 +1,5 @@
 import React from 'react'
-import '../Styles/divalinhacentro.css'
+import '../styles/divalinhacentro.css'
 
 const DivAlinhamentoCentro = ({ reactComponentToBeAligned }) => {
   return (

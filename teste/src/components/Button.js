@@ -1,5 +1,5 @@
 import React from 'react'
-import '../Styles/button.css'
+import '../styles/button.css'
 
 const Button = ( { placeholder, handleSubmit, className} ) => {
   return (

@@ -1,9 +1,11 @@
 import React from "react";
-import LoginPage from "./Pages/LoginPage";
+import LoginPage from "./pages/LoginPage";
+import CadastroPage from "./pages/CadastroPage";
 
 function App() {
   return (
-    <LoginPage/>
+    // <LoginPage/>
+    <CadastroPage />
   );
 }
 

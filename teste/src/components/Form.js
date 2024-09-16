@@ -2,10 +2,10 @@ import React from 'react'
 import Field from './Field'
 import Button from './Button'
 import DivAlinhamentoCentro from './DivAlinhamentoCentro'
-import '../Styles/form.css'
+import '../styles/form.css'
 
 const Form = () => {
-    
+
     const [email, setEmail] = React.useState('');
     const [senha, setSenha] = React.useState('');
     const [erro, setErro] = React.useState(false);
@@ -28,6 +28,7 @@ const Form = () => {
 
     return (
         <form onSubmit={handleSubmit} className='form'>
+
             <Field 
                 type='email'
                 value = {email}
