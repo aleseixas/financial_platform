@@ -1,15 +1,131 @@
-p {
-    margin: 0;
-    padding: 0;
+/* Centralização do formulário na tela */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #04043C; /* Fundo azul escuro */
 }
 
-.cadastro {
-    background-color: #04043C;
-    height: 100vh;
-    width: 100vw;
-    padding: 0;
-    margin: 0;
-    color: white;
+.register-form {
+    background-color: #fff;
+    padding: 20px 30px; /* Ajuste de padding */
+    border-radius: 8px; /* Bordas ligeiramente arredondadas */
+    width: 380px; /* Ajuste de largura */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Fonte do Facebook */
+}
+
+h2 {
+    margin-bottom: 5px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #1c1e21; /* Cor do título */
+    text-align: start; /* Centralizando o título */
+}
+
+p {
+    font-size: 16px;
+    color: #606770; /* Texto em cinza médio */
+    margin-bottom: 20px;
+    text-align: start; /* Centralizando o texto */
+}
+
+.input-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 14px; /* Padding maior para replicar o estilo Facebook */
+    margin-bottom: 10px;
+    border: 1px solid #ccd0d5;
+    border-radius: 6px; /* Bordas arredondadas */
+    font-size: 16px; /* Texto maior nos inputs */
+    box-sizing: border-box;
+    color: #1d2129;
+}
+
+.input-group input[type="text"] {
+    width: 48%;
+}
+
+.gender-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.gender-group label {
     display: flex;
     align-items: center;
+}
+
+.gender-group input[type="radio"] {
+    margin-right: 5px;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="password"]::placeholder {
+    font-size: 16px;
+    color: #999999; /* Placeholder em cinza claro */
+}
+
+/* Estilo dos botões de gênero */
+.gender-group label {
+    font-size: 16px;
+    color: #1c1e21;
+}
+
+/* Botão de envio */
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #14A586; /* Verde típico do botão Facebook */
+    color: white;
+    font-size: 20px; /* Tamanho maior para parecer com o estilo FB */
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background-color: #36a420; /* Tom mais escuro ao passar o mouse */
+}
+
+/* Ajustes para campos de data de nascimento */
+.date-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.date-group input {
+    width: 32%; /* Ajustando largura dos inputs de data */
+    padding: 10px;
+    border: 1px solid #ccd0d5;
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box;
+    color: #1d2129;
+}
+
+/* Ajuste de responsividade */
+@media (max-width: 400px) {
+    .register-form {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .input-group input[type="text"],
+    .date-group input {
+        width: 100%; /* Campos ocupam toda a largura em telas menores */
+        margin-bottom: 10px;
+    }
 }
