@@ -1,8 +1,9 @@
 import React from 'react'
-import Field from './Field'
-import Button from './Button'
+import InputFieldText from './InputFieldText'
+import SubmissionButton from './SubmissionButton'
 import DivAlinhamentoCentro from './DivAlinhamentoCentro'
 import '../styles/form.css'
+import Button from './Button'
 
 const Form = () => {
 
@@ -29,26 +30,29 @@ const Form = () => {
     return (
         <form onSubmit={handleSubmit} className='form'>
 
-            <Field 
-                type='email'
+            <InputFieldText 
+                className={'field'}
                 value = {email}
                 setValue={setEmail}
+                placeholder={'Email'}
             />
-
-            <Field 
+            
+            <InputFieldText 
+                className={'field'}
                 type = 'password'
                 value = {senha}
                 setValue={setSenha}
+                placeholder={'Senha'}
             />
-            <Button 
-                handleSubmit = {handleSubmit} // funcao para logar o usuario
+            
+            <SubmissionButton 
                 placeholder={'Entrar'}
                 className={'botaoEntrar'}
             />
+            
             <DivAlinhamentoCentro 
                 reactComponentToBeAligned={
-                    <Button
-                        handleSubmit={handleSubmit} //trocar para uma função que lida com esquecer a senha
+                    <Button // imlementar onClick para enviar ele à página de recuperação de senha
                         placeholder={'Esqueceu a senha?'}
                         className={'botaoEsqueceuSenha'}
                     />
@@ -57,8 +61,7 @@ const Form = () => {
 
             <DivAlinhamentoCentro 
                 reactComponentToBeAligned={
-                    <Button 
-                        handleSubmit={handleSubmit} //trocar para uma função que lida com ir para a pag de criar conta
+                    <Button // implementar a navegação para a página de cadastro
                         placeholder={'Criar nova conta'}
                         className={'botaoCriarConta'}   
                     />

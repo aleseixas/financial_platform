@@ -4,8 +4,8 @@ import CadastroPage from "./pages/CadastroPage";
 
 function App() {
   return (
-    // <LoginPage/>
-    <CadastroPage />
+    <LoginPage/>
+    // <CadastroPage />
   );
 }
 

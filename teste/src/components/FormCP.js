@@ -1,7 +1,7 @@
 import React from 'react'
 import FieldCP from './FieldCP'
 import Button from './Button'
-import DivAlinhamentoCentro from './DivAlinhamentoCentro'
+import DivAlinhamentoCentro from './DivAlinhamentoCentro.js'
 import '../styles/formCP.css'
 
 const FormCP = () => {

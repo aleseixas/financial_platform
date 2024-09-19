@@ -1,11 +1,11 @@
 import React from 'react'
-import '../styles/button.css'
 
-const Button = ( { placeholder, handleSubmit, className} ) => {
+const Button = ({ placeholder, handleClick, className }) => {
   return (
     <button
         className={className}
-        onClick={handleSubmit}>
+        onClick={handleClick}
+    >
         {placeholder}
     </button>
   )
