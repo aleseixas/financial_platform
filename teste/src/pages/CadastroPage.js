@@ -133,7 +133,7 @@ const Cadastro = () => {
         
        <Button
         handleSubmit={handleSubmit} //trocar para uma função que lida com ir para a pag de criar conta
-        placeholder={'Cadastra-se'}
+        placeholder={'Cadastre-se'}
         className={'submit-btn'}   
         />
 
