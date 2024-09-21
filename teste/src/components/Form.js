@@ -4,6 +4,7 @@ import SubmissionButton from './SubmissionButton'
 import DivAlinhamentoCentro from './DivAlinhamentoCentro'
 import '../styles/form.css'
 import Button from './Button'
+import { Link } from 'react-router-dom'
 
 const Form = () => {
 
@@ -32,6 +33,7 @@ const Form = () => {
 
             <InputFieldText 
                 className={'field'}
+                type={'email'}
                 value = {email}
                 setValue={setEmail}
                 placeholder={'Email'}
@@ -62,8 +64,13 @@ const Form = () => {
             <DivAlinhamentoCentro 
                 reactComponentToBeAligned={
                     <Button // implementar a navegação para a página de cadastro
-                        placeholder={'Criar nova conta'}
-                        className={'botaoCriarConta'}   
+                        placeholder={
+                            <Link 
+                                to='/cadastro'
+                                style={{textDecoration: 'none', color: 'inherit'}}
+                            >Criar nova conta</Link>
+                        }
+                        className={'botaoCriarConta'}
                     />
                 }
             />            
