@@ -25,13 +25,13 @@ jobs:
         
     - name: Install dependencies
       run: npm ci
-      working-directory: ./testes  # Altere para o diretório correto
+      working-directory: ./teste  # Altere para o diretório correto
     
     - name: Build the project
       run: npm run build --if-present
-      working-directory: ./testes  # Altere para o diretório correto
+      working-directory: ./teste  # Altere para o diretório correto
     
     - name: Run tests
       run: npm test
-      working-directory: ./testes  # Altere para o diretório correto
+      working-directory: ./teste  # Altere para o diretório correto
 
