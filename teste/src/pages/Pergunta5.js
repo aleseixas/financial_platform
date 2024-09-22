@@ -47,7 +47,7 @@ const Pergunta5 = () => {
             <span> {alternativaC} </span>
             </label>
         </div>
-        <button className="continue-button">Continuar</button>
+        <button className="continue-button">Finalizar</button>
         </div>
     </div>
     )
