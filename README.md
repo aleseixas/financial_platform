@@ -9,3 +9,4 @@ Our goal with this project is to create an open platform hosted on Github Pages 
 - Alexandre Seixas 260355 :muscle:
 - João Guimarães 260542 :penguin:
 - Daniel da Cruz Vieira 260398 :snowman:
+
