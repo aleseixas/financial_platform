@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Button from '../components/Button';
 import '../styles/cadastro.css'
+import Navbar from '../components/Navbar';
 
 const Cadastro = () => {
   const [form, setForm] = useState({
@@ -29,116 +30,120 @@ const Cadastro = () => {
   };
 
   return (
-    <div className="form-container">
-      <form className="register-form" onSubmit={handleSubmit}>
-        <h2>Cadastre-se</h2>
-        <p>é rápido e fácil</p>
+    <>
+      <Navbar />
+      <div className="form-container">
+        <form className="register-form" onSubmit={handleSubmit}>
+          <h2>Cadastre-se</h2>
+          <p>é rápido e fácil</p>
 
-        <div className="input-group">
-          <input
-            type="text"
-            name="firstName"
-            placeholder="Nome"
-            value={form.firstName}
-            onChange={handleChange}
-            required
-          />
-          <input
-            type="text"
-            name="lastName"
-            placeholder="Sobrenome"
-            value={form.lastName}
-            onChange={handleChange}
-            required
-          />
-        </div>
-
-        <input
-          type="email"
-          name="email"
-          placeholder="Celular ou email"
-          value={form.email}
-          onChange={handleChange}
-          required
-        />
-
-        <input
-          type="password"
-          name="password"
-          placeholder="Nova senha"
-          value={form.password}
-          onChange={handleChange}
-          required
-        />
-
-        <div className="input-group">
-          <input
-            type="text"
-            name="birthDay"
-            placeholder="Dia"
-            value={form.birthDay}
-            onChange={handleChange}
-            required
-          />
-          <input
-            type="text"
-            name="birthMonth"
-            placeholder="Mês"
-            value={form.birthMonth}
-            onChange={handleChange}
-            required
-          />
-          <input
-            type="text"
-            name="birthYear"
-            placeholder="Ano"
-            value={form.birthYear}
-            onChange={handleChange}
-            required
-          />
-        </div>
-
-        <div className="gender-group">
-          <label>
+          <div className="input-group">
             <input
-              type="radio"
-              name="gender"
-              value="Masculino"
-              checked={form.gender === 'Masculino'}
+              type="text"
+              name="firstName"
+              placeholder="Nome"
+              value={form.firstName}
               onChange={handleChange}
+              required
             />
-            Masculino
-          </label>
-          <label>
             <input
-              type="radio"
-              name="gender"
-              value="Feminino"
-              checked={form.gender === 'Feminino'}
+              type="text"
+              name="lastName"
+              placeholder="Sobrenome"
+              value={form.lastName}
               onChange={handleChange}
+              required
             />
-            Feminino
-          </label>
-          <label>
-            <input
-              type="radio"
-              name="gender"
-              value="Personalizar"
-              checked={form.gender === 'Personalizar'}
-              onChange={handleChange}
-            />
-            Personalizar
-          </label>
-        </div>
-        
-       <Button
-        handleSubmit={handleSubmit} //trocar para uma função que lida com ir para a pag de criar conta
-        placeholder={'Cadastre-se'}
-        className={'submit-btn'}   
-        />
+          </div>
 
-      </form>
-    </div>
+          <input
+            type="email"
+            name="email"
+            placeholder="Celular ou email"
+            value={form.email}
+            onChange={handleChange}
+            required
+          />
+
+          <input
+            type="password"
+            name="password"
+            placeholder="Nova senha"
+            value={form.password}
+            onChange={handleChange}
+            required
+          />
+
+          <div className="input-group">
+            <input
+              type="text"
+              name="birthDay"
+              placeholder="Dia"
+              value={form.birthDay}
+              onChange={handleChange}
+              required
+            />
+            <input
+              type="text"
+              name="birthMonth"
+              placeholder="Mês"
+              value={form.birthMonth}
+              onChange={handleChange}
+              required
+            />
+            <input
+              type="text"
+              name="birthYear"
+              placeholder="Ano"
+              value={form.birthYear}
+              onChange={handleChange}
+              required
+            />
+
+          </div>
+
+          <div className="gender-group">
+            <label>
+              <input
+                type="radio"
+                name="gender"
+                value="Masculino"
+                checked={form.gender === 'Masculino'}
+                onChange={handleChange}
+              />
+              Masculino
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="gender"
+                value="Feminino"
+                checked={form.gender === 'Feminino'}
+                onChange={handleChange}
+              />
+              Feminino
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="gender"
+                value="Personalizar"
+                checked={form.gender === 'Personalizar'}
+                onChange={handleChange}
+              />
+              Personalizar
+            </label>
+          </div>
+          
+        <Button
+          handleSubmit={handleSubmit} //trocar para uma função que lida com ir para a pag de criar conta
+          placeholder={'Cadastra-se'}
+          className={'submit-btn'}   
+          />
+            
+        </form>
+      </div>
+    </>
   );
 };
 
