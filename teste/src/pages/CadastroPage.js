@@ -99,7 +99,6 @@ const Cadastro = () => {
               onChange={handleChange}
               required
             />
-
           </div>
 
           <div className="gender-group">
@@ -140,7 +139,7 @@ const Cadastro = () => {
           placeholder={'Cadastra-se'}
           className={'submit-btn'}   
           />
-            
+
         </form>
       </div>
     </>

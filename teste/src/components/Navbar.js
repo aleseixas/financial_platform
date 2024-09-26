@@ -15,15 +15,16 @@ const navigationBar = [
         'className': 'normalLink'
     },
     {
-        'name': 'Quiz',
+        'name': 'Perfil de investidor',
         'path': '/quiz',
         'className': 'normalLink'
     },
+    
     {
         'name': 'Perfil',
         'path': '/profile',
         'className': 'profile'
-    },  
+    },    
 ]
 
 const Navbar = () => {
