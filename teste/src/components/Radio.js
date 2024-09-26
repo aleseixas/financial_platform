@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Radio = ({ id, name, value, textLabel, onChange}) => {
+const Radio = ({ id, name, value, textLabel }) => {
   return (
     <>
         <input
@@ -8,7 +8,6 @@ const Radio = ({ id, name, value, textLabel, onChange}) => {
             id = {id}
             name = {name}
             value={value}
-            onChange={onChange}
         />
         <label htmlFor={id}>{textLabel}</label>
     </>

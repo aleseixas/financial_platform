@@ -1,16 +1,15 @@
-import React from 'react';
+import React from 'react'
 
-const InputCalendar = ({ id, name, value, placeholder, onChange }) => {
+const InputCalendar = ({ id, name }) => {
   return (
-    <input
-      type="date"
-      id={id}
-      name={name}
-      value={value}
-      placeholder={placeholder}
-      onChange={onChange}
-    />
-  );
-};
+    <>
+        <input 
+            type='date'
+            id = {id}
+            name = {name}
+        />
+    </> 
+  )
+}
 
-export default InputCalendar;
+export default InputCalendar

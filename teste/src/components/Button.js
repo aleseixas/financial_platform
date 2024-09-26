@@ -1,10 +1,10 @@
 import React from 'react'
 
-const Button = ({ onClick, placeholder, className }) => {
+const Button = ({ placeholder, handleClick, className }) => {
   return (
     <button
         className={className}
-        onClick={onClick}
+        onClick={handleClick}
     >
         {placeholder}
     </button>
