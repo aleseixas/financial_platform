@@ -4,12 +4,13 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import LoginPage from './pages/LoginPage';
 import Cadastro from './pages/CadastroPage';
+import Perguntas from './pages/Perguntas';
+import ResultadosQuiz from './pages/ResultadosQuiz';
 
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import "./index.css";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,14 @@ const router = createBrowserRouter([
   {
     path: '/cadastro',
     element: <Cadastro/>
+  },
+  {
+    path: '/quiz',
+    element: <Perguntas/>
+  },
+  {
+    path: '/resultados',
+    element: <ResultadosQuiz/>
   }
 ]);
 

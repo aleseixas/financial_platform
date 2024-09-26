@@ -1,11 +1,24 @@
 import React from "react";
-import LoginPage from "./pages/LoginPage";
-import CadastroPage from "./pages/CadastroPage";
+// import LoginPage from "./pages/LoginPage";
+// import CadastroPage from "./pages/CadastroPage";
+// import Arrojado from "./pages/Arrojado";
+// import Conservador from "./pages/Conservador";
+// import Moderado from "./pages/Moderado";
+import Perguntas from "./pages/Perguntas";
 
 function App() {
   return (
-    <LoginPage/>
+    /* login e cadastro */
+    // <LoginPage/>
     // <CadastroPage />
+
+    /* resultados do quiz */
+    // <Arrojado/>
+    // <Conservador/>
+    // <Moderado/>
+
+    /* perguntas do quiz */
+    <Perguntas/>
   );
 }
 
