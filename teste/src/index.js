@@ -4,6 +4,7 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import LoginPage from './pages/LoginPage';
 import Cadastro from './pages/CadastroPage';
+import Perguntas from './pages/Perguntas';
 
 import {
   createBrowserRouter,
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
   {
     path: '/cadastro',
     element: <Cadastro/>
+  },
+  {
+    path: '/quiz',
+    element: <Perguntas/>
   }
 ]);
 

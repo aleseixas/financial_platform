@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import '../styles/perguntas.css'
+import Button from '../components/Button';
 
 const perguntas = [
     {
@@ -94,7 +95,7 @@ const Perguntas = () => {
             <span> {perguntas[i].alternativas[2]} </span>
             </label>
         </div>
-        <button className="continue-button" onClick={handleClick}> {i == perguntas.length - 1 ? "Finalizar" : "Continuar"} </button>
+        <Button onClick={handleClick} placeholder={i == perguntas.length - 1 ? "Finalizar" : "Continuar"} className={"continue-button"}/>
         </div>
     </div>
     )

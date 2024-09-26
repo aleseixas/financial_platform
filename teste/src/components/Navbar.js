@@ -15,7 +15,7 @@ const navigationBar = [
         'className': 'normalLink'
     },
     {
-        'name': 'Perfil de investidor',
+        'name': 'Quiz',
         'path': '/quiz',
         'className': 'normalLink'
     },
