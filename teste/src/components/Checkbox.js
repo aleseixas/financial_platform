@@ -1,17 +1,26 @@
-import React from 'react'
+import React, { useState } from 'react';
 
-const Checkbox = ({ id, name, value, textLabel}) => {
+const Checkbox = ({ onChange, label, id }) => {
+  const [checked, setChecked] = useState(false);
+
+  const handleChange = (event) => {
+    setChecked(event.target.checked);
+    if (onChange) {
+      onChange(event);
+    }
+  };
+
   return (
-    <>
-        <input 
-            type='checkbox'
-            id = {id}
-            name = {name}
-            value = {value}
-        />
-        <label htmlFor={id}>{textLabel}</label>
-    </>
-  )
-}
+    <div>
+      <input
+        type="checkbox"
+        id={id}
+        checked={checked}
+        onChange={handleChange}
+      />
+      <label htmlFor={id}>{label}</label>
+    </div>
+  );
+};
 
-export default Checkbox
+export default Checkbox;
