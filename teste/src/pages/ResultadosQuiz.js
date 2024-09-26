@@ -1,9 +1,13 @@
-import React from 'react'
-import '../styles/resultados.css'
+import React, {useState} from 'react'
+import '../styles/perguntas.css'
+import Button from '../components/Button'
+import { useNavigate } from 'react-router-dom'
+
 import logoArrojado from '../Resources/ganho.png'
 import logoModerado from '../Resources/balanca-de-justica.png'
 import logoConservador from '../Resources/cofre.png'
 import { getSomaTotal} from './Perguntas'
+
 
 const resultados = [
     {
@@ -22,6 +26,7 @@ const resultados = [
 
 export const ResultadosQuiz = () => {
     const soma_total = getSomaTotal();
+    const navigate = useNavigate();
     var i = 0;
 
     if (soma_total >= 5 && soma_total <= 8) i = 0;
@@ -36,7 +41,7 @@ export const ResultadosQuiz = () => {
             alt='logo'
         />
         <p>{resultados[i].mensagem}</p>
-        <a href="#" className="button">Continuar</a>
+        <Button text='Continuar' onClick={() => navigate('/')}/>
     </div>
   )
 }

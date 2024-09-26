@@ -56,6 +56,7 @@ const Perguntas = () => {
     const navigate = useNavigate();
 
     const handleClick = () => {
+        if (i == 0) soma_total = 0;
         soma_total += alternativa_atual;
         if (i < perguntas.length - 1) {
             setI(i + 1);
