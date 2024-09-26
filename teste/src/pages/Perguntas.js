@@ -1,5 +1,6 @@
-import React, {useState} from 'react'
-import '../styles/perguntas.css'
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import '../styles/perguntas.css';
 import Button from '../components/Button';
 
 const perguntas = [
@@ -45,10 +46,15 @@ const perguntas = [
     },
 ]
 
-var soma_total = 0, alternativa_atual = 0;
+let soma_total = 0;
+let alternativa_atual = 0;
+export const getSomaTotal = () => soma_total;
+export const setSomaTotal = (val) => {soma_total = val;};
 
 const Perguntas = () => {
     const [i, setI] = useState(0);
+    const navigate = useNavigate();
+
     const handleClick = () => {
         soma_total += alternativa_atual;
         if (i < perguntas.length - 1) {
@@ -56,7 +62,7 @@ const Perguntas = () => {
         }
         else {
             console.log(soma_total);
-            // implementar direcionamento para tela de resultados
+            navigate('/resultados');
         }
     };
     const handleOptionChange = (event) => {

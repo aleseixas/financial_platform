@@ -19,12 +19,11 @@ const navigationBar = [
         'path': '/quiz',
         'className': 'normalLink'
     },
-    
     {
         'name': 'Perfil',
         'path': '/profile',
         'className': 'profile'
-    },    
+    },  
 ]
 
 const Navbar = () => {
