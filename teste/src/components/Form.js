@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react';
 import InputFieldText from './InputFieldText'
 import SubmissionButton from './SubmissionButton'
 import DivAlinhamentoCentro from './DivAlinhamentoCentro'
@@ -7,25 +7,24 @@ import Button from './Button'
 import { Link } from 'react-router-dom'
 
 const Form = () => {
-
-    const [email, setEmail] = React.useState('');
-    const [senha, setSenha] = React.useState('');
-    const [erro, setErro] = React.useState(false);
-    const [sucesso, setSucesso] = React.useState(false);
+    const [email, setEmail] = useState('');
+    const [senha, setSenha] = useState('');
+    // const [erro, setErro] = React.useState(false);
+    // const [sucesso, setSucesso] = React.useState(false);
 
     
     const handleSubmit = ( event ) => {
         event.preventDefault();
         
-        if (senha === '' || email === '') {
-            setErro(true);
-            setSucesso(false);
+        // if (senha === '' || email === '') {
+        //     setErro(true);
+        //     setSucesso(false);
         
-        } else {
+        // } else {
 
-            setSucesso(true);
-            setErro(false);
-        }
+        //     setSucesso(true);
+        //     setErro(false);
+        // }
     }
 
     return (
@@ -36,7 +35,7 @@ const Form = () => {
                 type={'email'}
                 value = {email}
                 setValue={setEmail}
-                placeholder={'Email'}
+                placeholder={"Email"}
             />
             
             <InputFieldText 
