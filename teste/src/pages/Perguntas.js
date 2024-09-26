@@ -45,13 +45,17 @@ const perguntas = [
     },
 ]
 
+var soma_total = 0, alternativa_atual = 0;
+
 const Perguntas = () => {
     const [i, setI] = useState(0);
     const handleClick = () => {
+        soma_total += alternativa_atual;
         if (i < perguntas.length - 1) {
             setI(i + 1);
         }
         else {
+            console.log(soma_total);
             // implementar direcionamento para tela de resultados
         }
     };
@@ -61,6 +65,7 @@ const Perguntas = () => {
           option.parentNode.classList.remove('selected'); 
         });
         event.target.parentNode.classList.add('selected'); 
+        alternativa_atual = parseInt(event.target.value);
     };
     
       return (
@@ -74,6 +79,7 @@ const Perguntas = () => {
             <input
                   type="radio"
                   name="investment-question"
+                  value="1"
                   onChange={handleOptionChange}
             />
             <span> {perguntas[i].alternativas[0]} </span>
@@ -82,6 +88,7 @@ const Perguntas = () => {
             <input
                 type="radio"
                 name="investment-question"
+                value="2"
                 onChange={handleOptionChange}
             />
             <span> {perguntas[i].alternativas[1]} </span>
@@ -90,12 +97,13 @@ const Perguntas = () => {
             <input
                   type="radio"
                   name="investment-question"
+                  value="3"
                   onChange={handleOptionChange}
             />
             <span> {perguntas[i].alternativas[2]} </span>
             </label>
         </div>
-        <Button onClick={handleClick} placeholder={i == perguntas.length - 1 ? "Finalizar" : "Continuar"} className={"continue-button"}/>
+        <Button onClick={handleClick} placeholder={i === perguntas.length - 1 ? "Finalizar" : "Continuar"} className={"continue-button"}/>
         </div>
     </div>
     )
