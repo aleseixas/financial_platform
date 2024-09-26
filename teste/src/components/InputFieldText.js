@@ -1,21 +1,16 @@
-import React from 'react'
-import '../styles/inputfieldtext.css'
+import React from 'react';
 
-const InputFieldText = ( { type, value, setValue, className, placeholder} ) => {
-    
-    const handleChange = ( event ) => {
-        setValue(event.target.value);
-    }
+const InputFieldText = ({ id, name, value, placeholder, onChange }) => {
+  return (
+    <input
+      type="text"
+      id={id}
+      name={name}
+      value={value}
+      placeholder={placeholder}
+      onChange={onChange}
+    />
+  );
+};
 
-    return (<>
-      <input className={className}
-          type={type}
-          onChange={handleChange} 
-          placeholder= {placeholder}
-          value={value}
-      />
-      </>
-  )
-}
-
-export default InputFieldText
+export default InputFieldText;
