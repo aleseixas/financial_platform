@@ -26,7 +26,7 @@ const Cadastro = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Lógica de submissão do formulário
-    console.log(form);
+    // console.log(form);
   };
 
   return (
@@ -59,7 +59,7 @@ const Cadastro = () => {
           <input
             type="email"
             name="email"
-            placeholder="Celular ou email"
+            placeholder="Email"
             value={form.email}
             onChange={handleChange}
             required
@@ -68,7 +68,7 @@ const Cadastro = () => {
           <input
             type="password"
             name="password"
-            placeholder="Nova senha"
+            placeholder="Senha"
             value={form.password}
             onChange={handleChange}
             required
@@ -86,7 +86,7 @@ const Cadastro = () => {
             <input
               type="text"
               name="birthMonth"
-              placeholder="Mês"
+              placeholder="Mes"
               value={form.birthMonth}
               onChange={handleChange}
               required
