@@ -4,18 +4,6 @@ import { Link } from 'react-router-dom'
 import '../styles/navbar.css'
 
 const navigationBar = [
-    {
-        'name': 'Entrar',
-        'path': '/login',
-        'className': 'normalLink'
-
-    },
-
-    {
-        'name': 'Cadastro',
-        'path': '/cadastro',
-        'className': 'normalLink'
-    },
 
     {
         'name': 'Home',
@@ -28,6 +16,49 @@ const navigationBar = [
         'path': '/profile',
         'className': 'normalLink'
     },  
+
+    {
+        'name': 'Cursos',
+        'path': '/cursos',
+        'className': 'normalLink'
+    },
+
+    {
+        'name': 'QuantBot',
+        'path': '/quantBot',
+        'className': 'normalLink'
+    },
+
+    {
+        'name': 'Exercicios',
+        'path': '/exercicios',
+        'className': 'normalLink'
+    },
+
+    {
+        'name': 'Leitura',
+        'path': '/leitua',
+        'className': 'normalLink'
+    },
+
+    {
+        'name': 'Noticias',
+        'path': '/noticias',
+        'className': 'normalLink'
+    },
+
+    {
+        'name': 'Entrar',
+        'path': '/login',
+        'className': 'normalLink'
+
+    },
+
+    {
+        'name': 'Cadastro',
+        'path': '/cadastro',
+        'className': 'normalLink'
+    },
 ]
 
 const Navbar = () => {
