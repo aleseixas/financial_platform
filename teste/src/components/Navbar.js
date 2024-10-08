@@ -5,24 +5,28 @@ import '../styles/navbar.css'
 
 const navigationBar = [
     {
-        'name': 'Home',
-        'path': '/home',
-        'className': 'normalLink',
+        'name': 'Entrar',
+        'path': '/login',
+        'className': 'normalLink'
+
     },
+
     {
         'name': 'Cadastro',
         'path': '/cadastro',
         'className': 'normalLink'
     },
+
     {
-        'name': 'Quiz',
-        'path': '/quiz',
-        'className': 'normalLink'
+        'name': 'Home',
+        'path': '/home',
+        'className': 'normalLink',
     },
+
     {
-        'name': 'Perfil',
+        'name': 'Profile',
         'path': '/profile',
-        'className': 'profile'
+        'className': 'normalLink'
     },  
 ]
 

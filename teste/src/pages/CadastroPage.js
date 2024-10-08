@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';  
 import Button from '../components/Button';
-import '../styles/cadastro.css'
+import '../styles/cadastro.css';
 import Navbar from '../components/Navbar';
 
 const Cadastro = () => {
@@ -15,6 +16,8 @@ const Cadastro = () => {
     gender: '',
   });
 
+  const navigate = useNavigate();  
+  
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm({
@@ -25,8 +28,11 @@ const Cadastro = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Lógica de submissão do formulário
+    // Lógica de submissão do formulário aqui
     // console.log(form);
+
+    // Redireciona para a página de perguntas
+    navigate('/quiz');
   };
 
   return (
@@ -99,7 +105,6 @@ const Cadastro = () => {
               onChange={handleChange}
               required
             />
-
           </div>
 
           <div className="gender-group">
@@ -135,12 +140,11 @@ const Cadastro = () => {
             </label>
           </div>
           
-        <Button
-          handleSubmit={handleSubmit} //trocar para uma função que lida com ir para a pag de criar conta
-          placeholder={'Cadastra-se'}
-          className={'submit-btn'}   
+          <Button
+            handleSubmit={handleSubmit}
+            placeholder={'Cadastra-se'}
+            className={'submit-btn'}   
           />
-            
         </form>
       </div>
     </>

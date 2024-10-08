@@ -6,6 +6,7 @@ import LoginPage from './pages/LoginPage';
 import Cadastro from './pages/CadastroPage';
 import Perguntas from './pages/Perguntas';
 import ResultadosQuiz from './pages/ResultadosQuiz';
+import ProfilePage from './pages/ProfilePage';
 
 import {
   createBrowserRouter,
@@ -22,13 +23,28 @@ const router = createBrowserRouter([
     element: <Cadastro/>
   },
   {
+    path: '/login',
+    element: <LoginPage />
+  },
+  
+  {
     path: '/quiz',
     element: <Perguntas/>
   },
   {
     path: '/resultados',
     element: <ResultadosQuiz/>
-  }
+  },
+
+  {
+    path: '/profile',
+    element: <ProfilePage/>
+  },
+  
+  // {
+  //   path: '/home'
+  //   element :
+  // }
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
