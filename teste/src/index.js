@@ -7,6 +7,7 @@ import Cadastro from './pages/CadastroPage';
 import Perguntas from './pages/Perguntas';
 import ResultadosQuiz from './pages/ResultadosQuiz';
 import ProfilePage from './pages/ProfilePage';
+import HomePage from './pages/HomePage';
 
 import {
   createBrowserRouter,
@@ -40,11 +41,10 @@ const router = createBrowserRouter([
     path: '/profile',
     element: <ProfilePage/>
   },
-  
-  // {
-  //   path: '/home'
-  //   element :
-  // }
+  {
+    path: '/home',
+    element : <HomePage />
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
