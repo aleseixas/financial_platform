@@ -63,23 +63,28 @@ const navigationBar = [
 
 const Navbar = () => {
   return (
-    <header>
-        <nav>
-            <div className='imagem'>
-                <img 
-                    src={logosymbol}
-                    alt='simbolo'
+    <header className='header'>
+        <div className='imagem'>
+            <img 
+                style={{
+                    float: 'left',
+                    boxSizing:'border-box',
+                    height:'100%'
+                }}
+                src={logosymbol}
+                alt='simbolo'
                 />
-                <ul>
+        </div>
+        <nav>
+            <ul className='navbar-list'>
                 {
                     navigationBar.map((item) => 
-                        <li id={item['path']}>
+                        <li id={item['path']} className='navbar-link'>
                             <Link to={item['path']} className={item['className']}>{item['name']}</Link>
                         </li>
                     )
                 }
-                </ul>
-            </div>
+            </ul>
         </nav>
     </header>
   )
