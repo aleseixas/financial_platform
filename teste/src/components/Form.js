@@ -9,22 +9,10 @@ import { Link } from 'react-router-dom'
 const Form = () => {
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
-    // const [erro, setErro] = React.useState(false);
-    // const [sucesso, setSucesso] = React.useState(false);
-
     
     const handleSubmit = ( event ) => {
         event.preventDefault();
         
-        // if (senha === '' || email === '') {
-        //     setErro(true);
-        //     setSucesso(false);
-        
-        // } else {
-
-        //     setSucesso(true);
-        //     setErro(false);
-        // }
     }
 
     return (
