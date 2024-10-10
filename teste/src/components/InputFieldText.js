@@ -1,14 +1,15 @@
 import React from 'react';
 
-const InputFieldText = ({ id, name, value, placeholder, onChange }) => {
+const InputFieldText = ({ id, className, type, value, placeholder, onChange, ...props}) => {
   return (
-    <input
-      type="text"
+    <input 
+      className={className}
+      type={type}
       id={id}
-      name={name}
       value={value}
       placeholder={placeholder}
       onChange={onChange}
+      {...props}
     />
   );
 };
