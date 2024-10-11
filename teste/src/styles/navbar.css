@@ -78,3 +78,72 @@ li:hover {
     background-color: whitesmoke
 }
 
+/* Contêiner principal do menu */
+.navbar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; /* Centraliza verticalmente todos os itens, incluindo os botões */
+    height: 60px; /* Certifique-se de que a altura seja consistente */
+    padding: 0 20px;
+    background-color: white; /* Ajuste a cor do fundo conforme seu design */
+}
+
+/* Links comuns do menu */
+.nav-item {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    padding: 10px 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-item:hover {
+    color: #14A586; 
+}
+
+
+.cadastro-btn, .entrar-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border: none;
+    margin-right: 10px;
+    margin-left: 10px;
+    height: 40px; /* Ajusta a altura dos botões */
+}
+
+.cadastro-btn {
+    background-color: #14A586;
+}
+
+.entrar-btn {
+    background-color: #04043C;
+}
+
+/* Efeitos de hover */
+.cadastro-btn:hover {
+    background-color: #0e7b63; /* Tom mais escuro no hover */
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+.entrar-btn:hover {
+    background-color: #02021f; /* Tom mais escuro para o hover */
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Efeito ativo */
+.cadastro-btn:active, .entrar-btn:active {
+    transform: translateY(0px);
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+}
+

@@ -48,17 +48,18 @@ const navigationBar = [
     },
 
     {
-        'name': 'Entrar',
-        'path': '/login',
-        'className': 'normalLink'
-
+        'name': 'Cadastro',
+        'path': '/cadastro',
+        'className': 'cadastro-btn'
     },
 
     {
-        'name': 'Cadastro',
-        'path': '/cadastro',
-        'className': 'normalLink'
+        'name': 'Entrar',
+        'path': '/login',
+        'className': 'entrar-btn'
+
     },
+
 ]
 
 const Navbar = () => {

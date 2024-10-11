@@ -1,6 +1,13 @@
-p {
-    margin: 0;
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+
+.texto{
+    margin: 15%;
     padding: 0;
+    color: white;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
 }
 
 .login {
@@ -12,16 +19,16 @@ p {
     margin: 0;
     color: white;
     display: flex;
-    align-items: center;
+    align-items:center ;
 }
 
+
+
 .logo {
-    /* background-repeat: no-repeat; */
-    /* background-image: url('../Resources/logo.png'); */
-    background-size: contain;
-    width: 50vw;
+    width: 30%; /* Ajusta o tamanho da imagem */
     height: auto;
-    min-height: 250px;
-    min-width: 250px;
-    padding-left: 50px;
+    min-height: 60%;
+    min-width: 60%;
+    margin-left: 20%;  /* Garante que a imagem esteja centralizada horizontalmente */
+    padding: 10%
 }

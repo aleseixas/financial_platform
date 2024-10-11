@@ -12,8 +12,11 @@ const Login = () => {
     <>
       <Navbar />
       <div className="login">
-        <div>
+        <div classname = "form-container">
           <img src={logo} className='logo' alt='logo' />
+          <p className='texto'>
+          QuantifyEdu ajuda você a aprender e tomar decisões financeiras inteligentes com o poder da IA e da análise quantitativa.
+          </p>
         </div>
 
         <FormLogin />
