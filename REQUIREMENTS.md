@@ -35,10 +35,14 @@ Desenvolver uma página que ofereça textos educativos organizados de maneira ac
 
 ### Yahoo Finance
 ![](imgs/yahoo_finances.png)
+![](imgs/yahoo_finance_latestnews.png)
+![](imgs/yahoo_finance_stockmarketnews.png)
 - **Destaques**: Como pontos positivos, podemos destacar que o Yahoo Finances agrupa as notícias em categorias, como podemos ver nas imagens acima (“Últimas Notícias”, “Notícias do Mercado de Ações”, “Notícias sobre Criptomoedas”, entre outras), o que funciona como um bom filtro, dando direcionamento à pesquisa de um usuário. Além disso, o site é diariamente atualizado, oferecendo detalhes sobre variações de ações e análises de especialistas, o que pode ser interessante para atrair investidores mais experientes. No entanto, podemos ver que a abundância de dados e informações citada traz também um ponto negativo para a plataforma, já que isso pode confundir e afastar usuários que buscam informações mais simples ou que ainda não detêm o conhecimento necessário para interpretar e entender tais conteúdos.
 - **Inspiração**: O site do Yahoo Finance apresenta uma ótima interação com o usuário, permitindo que este visualize notícias organizadas por relevância e por assuntos. Além disso, o site possibilita que o usuário crie uma lista de empresas favoritas para acompanhar, proporcionando assim uma experiência personalizada.
 
 ### Bloomberg
+![](imgs/bloomberg1.png)
+![](imgs/bloomberg2.png)
 - **Destaques**: Assim como o site da Yahoo, o Bloomberg apresenta as notícias organizadas por tópicos, facilitando a busca dos usuários. Entretanto, aqui vemos uma interface mais limpa, menos carregada com números, porcentagem e gráficos, o que vemos como um ponto positivo a ser destacado.
 - **Inspiração**: Apresentação visual clara das notícias, destacando imagem, manchete e há quanto tempo foi publicada, o que concretiza um design limpo e atraente.
 - - **Pontos Negativos**: O site não é totalmente gratuito, já que é preciso pagar uma assinatura anual para ler as notícias em sua íntegra.
