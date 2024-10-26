@@ -2,13 +2,13 @@
 ### Robô quantitativo
 
 ### Notícias
-Uma aba contendo notícias recentes relacionadas ao mundo de finanças e investimentos visando a manter os usuários atualizados sobre as movimentações do mercado. A ideia é que o site tenha acesso a notícias de fontes confiáveis e consiga exibir suas manchetes e links para os usuários, direcionando-os para a íntegra da notícia. *(feito)*
+Uma aba contendo notícias recentes relacionadas ao mundo de finanças e investimentos visando a manter os usuários atualizados sobre as movimentações do mercado. A ideia é que o site tenha acesso a notícias de fontes confiáveis e consiga exibir suas manchetes e links para os usuários, direcionando-os para a íntegra da notícia.
 
 ### Divulgação de cursos
-Desenvolver uma página de recomendações de cursos sobre educação financeira. A ideia é que os usuários possam usar esta ferramenta como um portal que centraliza informações/aulas de diversas páginas sobre diferentes tópicos relacionados a finanças. *(feito)*
+Desenvolver uma página de recomendações de cursos sobre educação financeira. A ideia é que os usuários possam usar esta ferramenta como um portal que centraliza informações/aulas de diversas páginas sobre diferentes tópicos relacionados a finanças.
 
 ### Leituras didáticas
-Desenvolver uma página que ofereça textos educativos organizados de maneira acessível e fluida. A ideia é criar uma experiência de leitura contínua e imersiva, permitindo que o usuário se concentre completamente no conteúdo. Para isso, foram analisadas interfaces que priorizam a leitura sem interrupções ou atividades complementares, destacando pontos de inspiração para o projeto. *(feito)*
+Desenvolver uma página que ofereça textos educativos organizados de maneira acessível e fluida. A ideia é criar uma experiência de leitura contínua e imersiva, permitindo que o usuário se concentre completamente no conteúdo. Para isso, foram analisadas interfaces que priorizam a leitura sem interrupções ou atividades complementares, destacando pontos de inspiração para o projeto.
 
 ---
 
@@ -16,13 +16,13 @@ Desenvolver uma página que ofereça textos educativos organizados de maneira ac
 ## Técnica escolhida: Benchmarking
 
 ### Ayn Rand Institute - Free Books for Students
-
+![](imgs/ayn_rand.png)
 - **Destaques**: Essa página oferece uma seleção de livros gratuitos com uma organização limpa e simples. Os livros são apresentados com suas capas em destaque, o que facilita a escolha visual do conteúdo.
 - **Inspiração**: A apresentação visual clara dos livros, com grande foco nas capas e no título, pode ser adaptada para o site de leitura didática. Oferecer aos usuários uma biblioteca visual de textos educativos, com ícones ou capas que ajudem a identificar rapidamente os temas de interesse, pode melhorar a experiência de navegação e escolha de leitura.
 - **Pontos Negativos**: A página, no entanto, é bastante estática e carece de interatividade, o que pode desmotivar o usuário a explorar mais profundamente o conteúdo. A ausência de personalização nas recomendações também pode ser uma limitação, pois não facilita que o usuário encontre o conteúdo ideal baseado em suas preferências ou interesses específicos.
 
 ### Medium
-![]()
+![](imgs/medium.png)
 - **Destaques**: O design do Medium foca em uma leitura imersiva, com artigos apresentados de forma simples e organizada. A página inicial lista os artigos de maneira clara, com títulos, imagens pequenas e uma breve introdução, criando um fluxo contínuo de leitura.
 - **Inspiração**: O site de leitura didática pode seguir a simplicidade do Medium, onde os textos são o elemento principal. A organização dos textos com títulos destacados e breves descrições antes do conteúdo completo pode facilitar a navegação do usuário, sem sobrecarregar a página com informações excessivas. O uso de uma interface responsiva e bem espaçada, como no Medium, melhora a fluidez da leitura e mantém o foco no conteúdo.
 - **Pontos Negativos**: Apesar do design limpo, a falta de categorização e de filtros mais específicos pode dificultar a localização de conteúdo relevante rapidamente. Além disso, as imagens pequenas não agregam tanto ao conteúdo visual, o que pode ser um problema em seu site, que pode demandar gráficos mais robustos para explicar conceitos complexos de robôs quantitativos.
