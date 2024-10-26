@@ -22,13 +22,13 @@ Desenvolver uma página que ofereça textos educativos organizados de maneira ac
 - **Pontos Negativos**: A página, no entanto, é bastante estática e carece de interatividade, o que pode desmotivar o usuário a explorar mais profundamente o conteúdo. A ausência de personalização nas recomendações também pode ser uma limitação, pois não facilita que o usuário encontre o conteúdo ideal baseado em suas preferências ou interesses específicos.
 
 ### Medium
-![](https://laysejulyanne.com.br/blog/wp-content/uploads/2019/08/como-criar-um-blog-no-medium-home-2-layse-julyanne-1024x475.png)
+![]()
 - **Destaques**: O design do Medium foca em uma leitura imersiva, com artigos apresentados de forma simples e organizada. A página inicial lista os artigos de maneira clara, com títulos, imagens pequenas e uma breve introdução, criando um fluxo contínuo de leitura.
 - **Inspiração**: O site de leitura didática pode seguir a simplicidade do Medium, onde os textos são o elemento principal. A organização dos textos com títulos destacados e breves descrições antes do conteúdo completo pode facilitar a navegação do usuário, sem sobrecarregar a página com informações excessivas. O uso de uma interface responsiva e bem espaçada, como no Medium, melhora a fluidez da leitura e mantém o foco no conteúdo.
 - **Pontos Negativos**: Apesar do design limpo, a falta de categorização e de filtros mais específicos pode dificultar a localização de conteúdo relevante rapidamente. Além disso, as imagens pequenas não agregam tanto ao conteúdo visual, o que pode ser um problema em seu site, que pode demandar gráficos mais robustos para explicar conceitos complexos de robôs quantitativos.
 
 ### Wikipedia
-![](https://upload.wikimedia.org/wikipedia/commons/2/23/Wikipedia_Homepage_Chromium_Web_browser_36.png)
+![]()
 - **Destaques**: A Wikipedia é conhecida por sua vasta quantidade de conteúdo organizado de forma estruturada. Os textos são divididos em seções e subtítulos, permitindo que o usuário navegue facilmente por diferentes tópicos. Além disso, a plataforma oferece links internos que permitem o aprofundamento em outros temas relacionados.
 - **Inspiração**: Para o site de leitura didática, a estrutura da Wikipedia é um exemplo a ser seguido. A divisão dos textos em seções claras e organizadas permitirá uma leitura mais fluida e sem distrações. O uso de links internos, como na Wikipedia, pode oferecer aos usuários a possibilidade de explorar mais profundamente os temas que desejarem, proporcionando uma experiência de aprendizado contínuo e exploratória.
 - **Pontos Negativos**: O design visual é bastante simplista, com pouca preocupação estética, o que pode tornar a experiência menos atraente para o usuário. A falta de elementos interativos ou gráficos impactantes pode ser um ponto fraco, especialmente para um site de leitura didática que trata de temas técnicos como robôs quantitativos.
