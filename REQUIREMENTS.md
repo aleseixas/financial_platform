@@ -34,7 +34,7 @@ Desenvolver uma página que ofereça textos educativos organizados de maneira ac
 - **Pontos Negativos**: O design visual é bastante simplista, com pouca preocupação estética, o que pode tornar a experiência menos atraente para o usuário. A falta de elementos interativos ou gráficos impactantes pode ser um ponto fraco, especialmente para um site de leitura didática que trata de temas técnicos como robôs quantitativos.
 
 ### Yahoo Finance
-![](https://i0.wp.com/urbizedge.com/wp-content/uploads/2023/01/1.png?fit=1800%2C930&ssl=1)
+![](imgs/yahoo_finances.png)
 - **Destaques**: Como pontos positivos, podemos destacar que o Yahoo Finances agrupa as notícias em categorias, como podemos ver nas imagens acima (“Últimas Notícias”, “Notícias do Mercado de Ações”, “Notícias sobre Criptomoedas”, entre outras), o que funciona como um bom filtro, dando direcionamento à pesquisa de um usuário. Além disso, o site é diariamente atualizado, oferecendo detalhes sobre variações de ações e análises de especialistas, o que pode ser interessante para atrair investidores mais experientes. No entanto, podemos ver que a abundância de dados e informações citada traz também um ponto negativo para a plataforma, já que isso pode confundir e afastar usuários que buscam informações mais simples ou que ainda não detêm o conhecimento necessário para interpretar e entender tais conteúdos.
 - **Inspiração**: O site do Yahoo Finance apresenta uma ótima interação com o usuário, permitindo que este visualize notícias organizadas por relevância e por assuntos. Além disso, o site possibilita que o usuário crie uma lista de empresas favoritas para acompanhar, proporcionando assim uma experiência personalizada.
 
