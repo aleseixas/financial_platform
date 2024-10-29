@@ -1,6 +1,5 @@
 # Features a serem desenvolvidas no projeto
 ### Robô quantitativo
-
 Uma aba contendo um relatório de performance de uma estratégia quantitativa implementada pelo site, como um exemplo de outro tipo de estratégia financeira. A ideia central é popularizar esse tipo de estratégia que ainda é pouco conhecida por muitos, mas que é a origem de um alto retorno reportado por _hedge funds_ ao redor do mundo. Não será uma ferramenta que investe automaticamente para o usuário, mas que serve como ilustração desse tipo de estratégia.
 
 ### Notícias
@@ -28,12 +27,6 @@ Desenvolver uma página que ofereça textos educativos organizados de maneira ac
 - **Destaques**: O design do Medium foca em uma leitura imersiva, com artigos apresentados de forma simples e organizada. A página inicial lista os artigos de maneira clara, com títulos, imagens pequenas e uma breve introdução, criando um fluxo contínuo de leitura.
 - **Inspiração**: O site de leitura didática pode seguir a simplicidade do Medium, onde os textos são o elemento principal. A organização dos textos com títulos destacados e breves descrições antes do conteúdo completo pode facilitar a navegação do usuário, sem sobrecarregar a página com informações excessivas. O uso de uma interface responsiva e bem espaçada, como no Medium, melhora a fluidez da leitura e mantém o foco no conteúdo.
 - **Pontos Negativos**: Apesar do design limpo, a falta de categorização e de filtros mais específicos pode dificultar a localização de conteúdo relevante rapidamente. Além disso, as imagens pequenas não agregam tanto ao conteúdo visual, o que pode ser um problema em seu site, que pode demandar gráficos mais robustos para explicar conceitos complexos de robôs quantitativos.
-
-### Wikipedia
-![]()
-- **Destaques**: A Wikipedia é conhecida por sua vasta quantidade de conteúdo organizado de forma estruturada. Os textos são divididos em seções e subtítulos, permitindo que o usuário navegue facilmente por diferentes tópicos. Além disso, a plataforma oferece links internos que permitem o aprofundamento em outros temas relacionados.
-- **Inspiração**: Para o site de leitura didática, a estrutura da Wikipedia é um exemplo a ser seguido. A divisão dos textos em seções claras e organizadas permitirá uma leitura mais fluida e sem distrações. O uso de links internos, como na Wikipedia, pode oferecer aos usuários a possibilidade de explorar mais profundamente os temas que desejarem, proporcionando uma experiência de aprendizado contínuo e exploratória.
-- **Pontos Negativos**: O design visual é bastante simplista, com pouca preocupação estética, o que pode tornar a experiência menos atraente para o usuário. A falta de elementos interativos ou gráficos impactantes pode ser um ponto fraco, especialmente para um site de leitura didática que trata de temas técnicos como robôs quantitativos.
 
 ### Yahoo Finance
 ![](imgs/yahoo_finances.png)
@@ -82,4 +75,4 @@ Inspirado no formato visual do Ayn Rand Institute, o site oferecerá uma vasta s
 Seguindo o exemplo do Medium, o design do site será minimalista, focado em proporcionar uma experiência confortável de leitura. Será dada atenção especial ao espaçamento adequado, ao uso de fontes legíveis e à inclusão de opções de personalização, como modo noturno e ajuste de tamanho de texto, melhorando a leitura em dispositivos variados.
 
 ### Leitura Contínua e Exploratória
-Assim como na Wikipedia, os textos no site serão divididos em seções e subtítulos, permitindo uma navegação fluida. Links internos serão utilizados para que o leitor possa se aprofundar em tópicos relacionados, criando uma experiência de leitura mais rica e interativa, sem a necessidade de quizzes ou gamificação.
+Os textos no site serão divididos em seções e subtítulos, permitindo uma navegação fluida. Links internos serão utilizados para que o leitor possa se aprofundar em tópicos relacionados, criando uma experiência de leitura mais rica e interativa, sem a necessidade de quizzes ou gamificação.
