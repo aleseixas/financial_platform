@@ -1,6 +1,8 @@
 # Features a serem desenvolvidas no projeto
 ### Robô quantitativo
 
+Uma aba contendo um relatório de performance de uma estratégia quantitativa implementada pelo site, como um exemplo de outro tipo de estratégia financeira. A ideia central é popularizar esse tipo de estratégia que ainda é pouco conhecida por muitos, mas que é a origem de um alto retorno reportado por _hedge funds_ ao redor do mundo. Não será uma ferramenta que investe automaticamente para o usuário, mas que serve como ilustração desse tipo de estratégia.
+
 ### Notícias
 Uma aba contendo notícias recentes relacionadas ao mundo de finanças e investimentos visando a manter os usuários atualizados sobre as movimentações do mercado. A ideia é que o site tenha acesso a notícias de fontes confiáveis e consiga exibir suas manchetes e links para os usuários, direcionando-os para a íntegra da notícia.
 
