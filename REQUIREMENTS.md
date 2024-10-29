@@ -52,6 +52,21 @@ Desenvolver uma página que ofereça textos educativos organizados de maneira ac
 - **Inspiração**: Foco na clareza e na simplicidade: Cada lição é estruturada de maneira simples e clara, ajudando a tornar temas complexos mais compreensíveis. Gamificação: Elementos como pontos e medalhas mantêm os usuários motivados e incentivam o engajamento contínuo. Comunidade e suporte ao aluno: Fomentar uma comunidade de aprendizado é um ponto forte que você pode explorar para encorajar discussões e trocas de conhecimentos entre os alunos.
 - **Pontos negativos**: Falta de conteúdo avançado em algumas áreas: Embora abrangente, o conteúdo pode ser limitado em termos de profundidade para alguns tópicos avançados, o que pode ser uma oportunidade para sua plataforma se destacar em economia e finanças avançadas. A Khan Academy tende a focar mais em alunos e educação fundamental, deixando uma lacuna para cursos com abordagem mais profissional e prática, o que pode ser um diferencial para você. Dependência de vídeos: A plataforma é fortemente baseada em vídeo, o que nem sempre é ideal para todos os estilos de aprendizado.
 
+
+### Two Sigma Hedge Fund
+- **Destaques**:
+* O fundo de investimento Two Sigma é um dos maiores fundos baseados em estratégias quantitativas do mundo, tendo aproximadamente 56 bilhões de dólares sob gestão.
+* Reportam alto retorno anual; algo em torno de 15% até 25% ao ano, o que é uma ótima performance para o mercado. 
+* Implementam técnicas muito bem conhecidas pela comunidade financeira, baseadas principalmente em machine learning e extração de dados disponíveis na internet, o que torna a implementação das estratégias mais transparente.
+
+- **Inspiração**:
+* Por implementarem técnicas conhecidas pela comunidade e de fácil acesso, o centro da estratégia quantitativa a ser usada torna-se de fácil entendimento e com muito material disponível na internet, favorecendo o ensino dos usuários da plataforma quanto ao assunto.
+* Podemos utilizar a performance do fundo somada a uma certa folga para termos uma noção da performance da nossa ferramenta.
+
+- **Pontos Negativos**:
+* Não é uma ferramenta código aberto, o que torna a exata replicação difícil, comprometendo a performance de nossa ferramenta, além de um trabalho adicional para atingirmos parte da performance reportada pelo fundo.
+* Por ser uma ferramenta que muda sua posição no mercado com alta frequência, pode não ser claro ao usuário a motivação por trás da estratégia, muito menos o que realmente está acontecendo do ponto de vista financeiro. 
+
 ---
 
 ## Funcionalidades Relevantes para o Projeto
