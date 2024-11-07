@@ -24,15 +24,15 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-        cache-dependency-path: ./teste/package-lock.json
+        cache-dependency-path: ./frontend/package-lock.json
 
     - name: Install dependencies
       run: npm ci
-      working-directory: ./teste  # Adjust path as needed
+      working-directory: ./frontend # Adjust path as needed
 
     - name: Build the project
       run: npm run build --if-present
-      working-directory: ./teste  # Adjust path as needed
+      working-directory: ./frontend  # Adjust path as needed
 
   test:
     needs: build  # Job depends on build
@@ -48,12 +48,12 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-        cache-dependency-path: ./teste/package-lock.json
+        cache-dependency-path: ./frontend/package-lock.json
 
     - name: Install dependencies
       run: npm ci
-      working-directory: ./teste  # Adjust path as needed
+      working-directory: ./frontend  # Adjust path as needed
 
     - name: Run tests
       run: npm test
-      working-directory: ./teste  # Adjust path as needed
+      working-directory: ./frontend  # Adjust path as needed
