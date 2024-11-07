@@ -48,7 +48,7 @@ const navigationBar = [
     },
 
     {
-        'name': 'Entrar',
+        'name': 'Login',
         'path': '/login',
         'className': 'normalLink'
 
