@@ -60,6 +60,13 @@ class UserRegister(BaseModel):
 async def register(user: UserRegister):
     conn = sqlite3.connect('users.db')
     cursor = conn.cursor()
+    
+    # Check if the email already exists
+    cursor.execute("SELECT * FROM users WHERE email = ?", (user.email,))
+    if cursor.fetchone():
+        conn.close()
+        raise HTTPException(status_code=400, detail="Email already registered")
+    
     # Hash the password
     hashed_password = bcrypt.hashpw(user.password.encode('utf-8'), bcrypt.gensalt())
 
@@ -73,3 +80,25 @@ async def register(user: UserRegister):
         raise HTTPException(status_code=500, detail=f"Registration failed: {e.args[0]}")
     conn.close()
     return {"message": "User registered successfully!"}
+
+class UserLogin(BaseModel):
+    email: str
+    password: str
+
+@app.post("/api/login")
+async def login(user: UserLogin):
+    conn = sqlite3.connect('users.db')
+    cursor = conn.cursor()
+    cursor.execute("SELECT password FROM users WHERE email = ?", (user.email,))
+    result = cursor.fetchone()
+    conn.close()
+
+    if not result:
+        raise HTTPException(status_code=400, detail="Invalid email or password")
+
+    stored_password = result[0]
+
+    if not bcrypt.checkpw(user.password.encode('utf-8'), stored_password):
+        raise HTTPException(status_code=400, detail="Invalid email or password")
+
+    return {"message": "User logged in successfully!"}
