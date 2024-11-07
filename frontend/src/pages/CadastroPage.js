@@ -26,13 +26,24 @@ const Cadastro = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Lógica de submissão do formulário aqui
-    // console.log(form);
+    const { firstName, lastName, email, password, birthDay, birthMonth, birthYear, gender } = form;
 
-    // Redireciona para a página de perguntas
-    navigate('/quiz');
+    const response = await fetch('http://localhost:8000/api/register', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ firstName, lastName, email, password, birthDay, birthMonth, birthYear, gender }),
+    });
+    console.log(JSON.stringify({ firstName, lastName, email, password, birthDay, birthMonth, birthYear, gender}));
+
+    if (!response.ok) {
+      const errorData = await response.json();
+      console.error('Error:', errorData);
+      return;
+    }
+
+    const data = await response.json();
   };
 
   return (
