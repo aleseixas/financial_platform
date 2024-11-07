@@ -41,7 +41,6 @@ const Login = () => {
       return;
     }
 
-    const data = await response.json();
     // if there are no errors we redirect to the quiz page
     navigate('/quiz');
   };
