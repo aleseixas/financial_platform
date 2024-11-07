@@ -23,21 +23,12 @@ def init_db():
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         username TEXT,
         email TEXT,
-        password TEXT
+        password TEXT,
+        birthDay TEXT,
+        birthMonth TEXT,
+        birthYear TEXT,
+        gender TEXT
     )''')
-    
-    # Check and add new columns if they don't exist
-    cursor.execute("PRAGMA table_info(users)")
-    columns = [column[1] for column in cursor.fetchall()]
-    
-    if 'birthDay' not in columns:
-        cursor.execute('''ALTER TABLE users ADD COLUMN birthDay TEXT''')
-    if 'birthMonth' not in columns:
-        cursor.execute('''ALTER TABLE users ADD COLUMN birthMonth TEXT''')
-    if 'birthYear' not in columns:
-        cursor.execute('''ALTER TABLE users ADD COLUMN birthYear TEXT''')
-    if 'gender' not in columns:
-        cursor.execute('''ALTER TABLE users ADD COLUMN gender TEXT''')
     
     conn.commit()
     conn.close()
