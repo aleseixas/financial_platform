@@ -1,4 +1,5 @@
 import React from 'react'
+import InputFieldText from './InputFieldText'
 
 const UserDateInput = ({birthDayValue, birthMonthValue, birthYearValue, handleChange}) => {
   return (

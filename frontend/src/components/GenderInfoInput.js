@@ -1,4 +1,5 @@
 import React from 'react'
+import Radio from '../components/Radio'
 
 const GenderInfoInput = ({ generValue, handleChange }) => {
   return (
@@ -31,4 +32,4 @@ const GenderInfoInput = ({ generValue, handleChange }) => {
   )
 }
 
-export default GenderInfoInput
+export default GenderInfoInput;
