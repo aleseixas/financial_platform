@@ -8,6 +8,7 @@ import Perguntas from './pages/Perguntas';
 import ResultadosQuiz from './pages/ResultadosQuiz';
 import ProfilePage from './pages/ProfilePage';
 import HomePage from './pages/HomePage';
+import Cursos from './pages/Cursos'
 
 import {
   createBrowserRouter,
@@ -50,8 +51,13 @@ const router = createBrowserRouter([
   {
     path: '/noticias',
     element: <Noticias/>
-  }
+  },
 
+  {
+    path: '/cursos',
+    element:<Cursos/>
+  }
+  
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

@@ -1,0 +1,57 @@
+/* Estilos básicos da página */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #0a0c39; /* Cor de fundo semelhante ao design */
+    color: white;
+  }
+  
+  /* Container dos vídeos */
+  .videos-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h1 {
+    color: #00e3c1; /* Cor do título semelhante ao logo QuantifyEdu */
+    margin-bottom: 40px;
+  }
+  
+  /* Grid dos vídeos */
+  .video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .video-item {
+    background-color: #1a1c4b;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .video-item:hover {
+    transform: translateY(-10px);
+  }
+  
+  .video-item img {
+    max-width: 100%;
+    border-radius: 5px;
+  }
+  
+  .video-item h2 {
+    color: #00e3c1;
+    font-size: 1.5rem;
+    margin: 15px 0;
+  }
+  
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  
+ 
