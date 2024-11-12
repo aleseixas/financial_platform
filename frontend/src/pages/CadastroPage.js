@@ -3,6 +3,10 @@ import { useNavigate } from 'react-router-dom';
 import Button from '../components/Button';
 import '../styles/cadastro.css';
 import Navbar from '../components/Navbar';
+import UserNameComponent from '../components/UserNameComponent';
+import LoginInfoInput from '../components/LoginInfoInput';
+import UserDateInput from '../components/UserDateInput';
+import GenderInfoInput from '../components/GenderInfoInput';
 
 const Cadastro = () => {
   const [form, setForm] = useState({
@@ -57,100 +61,33 @@ const Cadastro = () => {
           <p>é rápido e fácil</p>
 
           <div className="input-group">
-            <input
-              type="text"
-              name="firstName"
-              placeholder="Nome"
-              value={form.firstName}
-              onChange={handleChange}
-              required
-            />
-            <input
-              type="text"
-              name="lastName"
-              placeholder="Sobrenome"
-              value={form.lastName}
-              onChange={handleChange}
-              required
+            <UserNameComponent 
+              firstNameValue = {form.firstName}
+              lastNameValue = {form.lastName}
+              handleChange = {handleChange}
             />
           </div>
 
-          <input
-            type="email"
-            name="email"
-            placeholder="Email"
-            value={form.email}
-            onChange={handleChange}
-            required
-          />
-
-          <input
-            type="password"
-            name="password"
-            placeholder="Senha"
-            value={form.password}
-            onChange={handleChange}
-            required
+          <LoginInfoInput 
+            emailValue={form.email}
+            passwordValue={form.password}
+            handleChange={handleChange}
           />
 
           <div className="input-group">
-            <input
-              type="text"
-              name="birthDay"
-              placeholder="Dia"
-              value={form.birthDay}
-              onChange={handleChange}
-              required
-            />
-            <input
-              type="text"
-              name="birthMonth"
-              placeholder="Mes"
-              value={form.birthMonth}
-              onChange={handleChange}
-              required
-            />
-            <input
-              type="text"
-              name="birthYear"
-              placeholder="Ano"
-              value={form.birthYear}
-              onChange={handleChange}
-              required
+            <UserDateInput 
+              birthDayValue={form.birthDay}
+              birthMonthValue={form.birthMonth}
+              birthYearValue={form.birthYear}
+              handleChange={handleChange}
             />
           </div>
 
           <div className="gender-group">
-            <label>
-              <input
-                type="radio"
-                name="gender"
-                value="Masculino"
-                checked={form.gender === 'Masculino'}
-                onChange={handleChange}
-              />
-              Masculino
-            </label>
-            <label>
-              <input
-                type="radio"
-                name="gender"
-                value="Feminino"
-                checked={form.gender === 'Feminino'}
-                onChange={handleChange}
-              />
-              Feminino
-            </label>
-            <label>
-              <input
-                type="radio"
-                name="gender"
-                value="Personalizar"
-                checked={form.gender === 'Personalizar'}
-                onChange={handleChange}
-              />
-              Personalizar
-            </label>
+            <GenderInfoInput 
+              generValue={form.gender}
+              handleChange={handleChange}
+            />
           </div>
           
           <Button
