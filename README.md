@@ -1,4 +1,7 @@
 # Diagrama de Componentes 
+![](imgs/diagrama.png)
+
+Para melhor visualização, confira o link https://drive.google.com/drive/folders/1hWtbcHJ1Zt3eKSoInFSqEd-J8oWj2qLX?usp=sharing
 
 ## Descrição textual das componentes
 ### 1) Controlador de usuário
