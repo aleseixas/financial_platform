@@ -13,8 +13,12 @@
   - **Responsabilidade**: Permitir que o usuário edite suas informações pessoais, como nome, senha, perfil de investidor, entre outros. Esta componente exibe o formulário de edição e lida com a validação dos dados atualizados.
 
 ### 2) Serviço de usuário
-- **Responsabilidade**: Lidar com a persistência de dados associados à plataforma, permitindo a realização de operações de leitura, escrita e atualização dos dados dos usuários diretamente no banco de dados utilizado;
+- **Responsabilidade**: Receber as solicitações dos controladores (como a **Página de login**, **Página de cadastro** e **Alteração de perfil**), processá-las e interagor com o banco de dados para garantir que as informações dos usuários sejam atualizadas, consultadas e validadas conforme necessário;
 - **Dependências**: Banco de dados.
+  ### 2.1) Autenticação
+  - **Responsabilidade**: Verificar as credenciais do usuário para autorizar ou negar acesso. Ao receber dados de login, o serviço consulta o banco de dados e compara as informações de forma segura, permitindo o acesso apenas em caso de correspondência.
+  ### 2.2) Registro de usuário
+  - **Responsabilidade**: Recebr os dados enviados pela **Página de cadastro** e criar uma nova entrada para o usuário no banco de dados.
 
 ### 3) Controlador de conteúdo
 - **Responsabilidade**: Gerenciar as solicitações de conteúdo feita pelos usuários na interface, ou seja, ele deve receber uma demanda do usuário e coordenar o fluxo de dados para entregar as informações corretas na interface;
