@@ -5,6 +5,12 @@
 - **Responsabilidade**: Gerenciar interações de entrada do usuário, ou seja, ele deve receber e coordenar as ações iniciadas pelo usuário na interface (frontend) da plataforma, como login, cadastro e alterações no perfil;
 - **Interface**: Deverá expor endpoints para cadastro, recuperação de senha e atualização de dados, por meio dos quais será feita a comunicação entre o frontend (interface visualizada pelo usuário) e o backend (banco de dados);
 - **Dependências**: Serviço de usuário.
+  ### 1.1) Página de login
+  - **Responsabilidade**: Exibir o formulário de login e autenticar os usuários ao sistema. Ela coleta as credenciais (uemail e senha) e realiza a validação básica de dados, enviando-os ao serviço de autenticação do sistema para verificar a validade. Caso o login seja bem-sucedido, redireciona o usuário para a interface principal da plataforma. Em caso de falha, exibe as mensagens de erro apropriadas.
+  ### 1.2) Página de cadastro
+  - **Responsabilidade**: Permitir que novos usuários se registrem no sistema. Exibe o formulário de cadastro, coletando dados como nome, e-mail, senha, e outras informações necessárias para o perfil. Realiza validações preliminares, como verificação de unicidade do email digitado (para que não seja permitido que o mesmo email esteja vinculado a mais de um usuário), e envia os dados ao sistema para criação de uma nova conta.
+  ### 1.3) Alteração de perfil
+  - **Responsabilidade**: Permitir que o usuário edite suas informações pessoais, como nome, senha, perfil de investidor, entre outros. Esta componente exibe o formulário de edição e lida com a validação dos dados atualizados.
 
 ### 2) Serviço de usuário
 - **Responsabilidade**: Lidar com a persistência de dados associados à plataforma, permitindo a realização de operações de leitura, escrita e atualização dos dados dos usuários diretamente no banco de dados utilizado;
