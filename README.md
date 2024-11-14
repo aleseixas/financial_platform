@@ -12,7 +12,7 @@
 
 ### 3) Controlador de conteúdo
 - **Responsabilidade**: Gerenciar as solicitações de conteúdo feita pelos usuários na interface, ou seja, ele deve receber uma demanda do usuário e coordenar o fluxo de dados para entregar as informações corretas na interface;
-- Interface: Como exemplos de conteúdos exibidos pela interface e que podem ser acessados pelo usuário na plataforma, temos: **i) Exibição de notícias**: O controlador recebe a solicitação para exibir uma notícia e retorna parâmetros dela para o usuário, como manchete, autor, data de publicação e corpo do texto; **ii) Visualização de cursos**: Permite que o usuário visualize a lista de cursos divulgados pela plataforma e informações básicas deles, como uma breve descrição e um link para seu acesso; **iii) Acesso a leituras didáticas**: Permite que o usuário explore leituras didáticas, organizadas por parâmetros de categoria e dificuldade. Ao selecionar um texto, o controlador deve exibir o texto, em sua íntegra, para o usuário.
+- **Interface**: Como exemplos de conteúdos exibidos pela interface e que podem ser acessados pelo usuário na plataforma, temos: **i) Exibição de notícias**: O controlador recebe a solicitação para exibir uma notícia e retorna parâmetros dela para o usuário, como manchete, autor, data de publicação e corpo do texto; **ii) Visualização de cursos**: Permite que o usuário visualize a lista de cursos divulgados pela plataforma e informações básicas deles, como uma breve descrição e um link para seu acesso; **iii) Acesso a leituras didáticas**: Permite que o usuário explore leituras didáticas, organizadas por parâmetros de categoria e dificuldade. Ao selecionar um texto, o controlador deve exibir o texto, em sua íntegra, para o usuário.
 - **Dependências**: Repositório de conteúdos e APIs externas públicas.
 
 ### 4) Repositório de conteúdos
@@ -21,3 +21,7 @@
 
 ### 5) Banco de dados
 - **Responsabilidade**: Armazenar os dados relacionados aos usuários e aos conteúdos da plataforma de maneira organizada e persistente, permitindo o funcionamento correto do site.
+
+## Estilos arquiteturais adotados
+### 1) Cliente-Servidor
+- **Justificativa**: Tal estilo é extremamente útil para a organização da comunicação entre o frontend e o backend da plataforma. Com isso, temos bem definida a separação de responsabilidades, na qual o frontend atua como cliente, enviando requisições para o backend (servidor), no qual residem a lógica de controle e dos serviços. Entre as vantagens que podemos extrair da adoção desse estilo, temos a obtenção de uma solução mais modular, o que facilita o gerenciamento dos estados da aplicação no frontend e o armazenamento de dados no backend.
