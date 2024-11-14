@@ -17,7 +17,7 @@
 
 ### 4) Repositório de conteúdos
 - **Responsabilidade**: Lidar diretamente com a persistência dos dados relacionados aos conteúdos exibidos pelo controlador de conteúdos, isto é, ele é responsável por adicionar e manter atualizadas as notícias, leituras e os cursos exibidos para os usuários, mantendo também organizadas as informações essenciais sobre esses;
-- ** Dependências**: Banco de dados.
+- **Dependências**: Banco de dados.
 
 ### 5) Banco de dados
 - **Responsabilidade**: Armazenar os dados relacionados aos usuários e aos conteúdos da plataforma de maneira organizada e persistente, permitindo o funcionamento correto do site.
