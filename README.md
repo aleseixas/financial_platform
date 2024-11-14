@@ -22,7 +22,13 @@
 
 ### 3) Controlador de conteúdo
 - **Responsabilidade**: Gerenciar as solicitações de conteúdo feita pelos usuários na interface, ou seja, ele deve receber uma demanda do usuário e coordenar o fluxo de dados para entregar as informações corretas na interface;
-- **Interface**: Como exemplos de conteúdos exibidos pela interface e que podem ser acessados pelo usuário na plataforma, temos: **i) Exibição de notícias**: O controlador recebe a solicitação para exibir uma notícia e retorna parâmetros dela para o usuário, como manchete, autor, data de publicação e corpo do texto; **ii) Visualização de cursos**: Permite que o usuário visualize a lista de cursos divulgados pela plataforma e informações básicas deles, como uma breve descrição e um link para seu acesso; **iii) Acesso a leituras didáticas**: Permite que o usuário explore leituras didáticas, organizadas por parâmetros de categoria e dificuldade. Ao selecionar um texto, o controlador deve exibir o texto, em sua íntegra, para o usuário.
+- **Interface**: Como exemplos de conteúdos exibidos pela interface e que podem ser acessados pelo usuário na plataforma (e que também serão tratados como componentes no diagrama), temos:
+  ### 3.1) Página de notícias
+  - **Responsabilidade**: Recebe a solicitação para exibir uma notícia e retornar parâmetros dela para o usuário, como manchete, autor, data de publicação e corpo do texto.
+  ### 3.2) Visualização de cursos
+  - **Responsabilidade**: Permitir que o usuário visualize a lista de cursos divulgados pela plataforma e informações básicas deles, como uma breve descrição e um link para seu acesso.
+  ### 3.3) Aba de leituras didáticas
+  - **Responsabilidade**: Permitir que o usuário explore leituras didáticas, organizadas por parâmetros de categoria e dificuldade. Ao selecionar um texto, o controlador deve exibir o texto, em sua íntegra, para o usuário.
 - **Dependências**: Repositório de conteúdos e APIs externas públicas.
 
 ### 4) Repositório de conteúdos
