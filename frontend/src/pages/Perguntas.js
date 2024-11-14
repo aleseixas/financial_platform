@@ -2,13 +2,15 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/perguntas.css';
 import Button from '../components/Button';
-import perguntasData from '../Resources/perguntas.json';  // Importe os dados do JSON
+import perguntasData from '../Resources/perguntas.json'; 
 
 let soma_total = 0;
 let alternativa_atual = 0;
 export const getSomaTotal = () => soma_total;
 export const setSomaTotal = (val) => { soma_total = val; };
 
+//Importando "perguntas.json" de um json separado. 
+//Commit das mudanças feito anteriormente na branch develop
 const Perguntas = () => {
     const [i, setI] = useState(0);
     const navigate = useNavigate();
