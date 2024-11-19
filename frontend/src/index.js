@@ -13,6 +13,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import Noticias from './pages/Noticias';
 
 
 const router = createBrowserRouter([
@@ -47,10 +48,14 @@ const router = createBrowserRouter([
     element : <HomePage />
   },
   {
+    path: '/Noticias',
+    element: <Noticias/>
+  },
+  {
     path: '/leitura',
     element : <Leitura />
-  }
-
+  },
+  
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
