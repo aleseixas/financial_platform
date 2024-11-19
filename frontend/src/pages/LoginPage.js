@@ -41,8 +41,8 @@ const Login = () => {
       return;
     }
 
-    // if there are no errors we redirect to the quiz page
-    navigate('/quiz');
+    // if there are no errors we redirect to this page
+    navigate('/profile');
   };
 
   return (
