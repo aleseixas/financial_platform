@@ -28,6 +28,34 @@ export const ResultadosQuiz = () => {
     imagem: index === 0 ? logoConservador : index === 1 ? logoModerado : logoArrojado
   }));
 
+  // Use useEffect to make a POST request when the component mounts
+  useEffect(() => {
+    const sendResults = async () => {
+      try {
+        const response = await fetch('http://localhost:8000/api/quizresult', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            resultado: i === 0 ? 'Conservador' : i === 1 ? 'Moderado' : 'Arrojado'
+          }),
+        });
+
+        if (!response.ok) {
+          throw new Error('Failed to send results');
+        }
+
+        const data = await response.json();
+        console.log('Results sent successfully:', data);
+      } catch (error) {
+        console.error('Error sending results:', error);
+      }
+    };
+
+    sendResults();
+  }, [soma_total, resultados, i]);
+
   return (
     <div className='container'>
       <img 
@@ -36,7 +64,7 @@ export const ResultadosQuiz = () => {
         alt='logo'
       />
       <p>{resultados[i].mensagem}</p>
-      <Button text='Continuar' onClick={() => navigate('/')} />
+      <Button text='Continuar' onClick={() => navigate('/profile')} />
     </div>
   );
 };

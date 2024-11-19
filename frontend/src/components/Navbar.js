@@ -33,6 +33,11 @@ const navigationBar = [
         'path': '/noticias',
         'className': 'normalLink'
     },
+    {
+        'name': 'Quiz',
+        'path': '/quiz',
+        'className': 'normalLink'
+    },
 
     {
         'name': 'Login',
