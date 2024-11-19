@@ -25,7 +25,7 @@ const QuantBot = () => {
     <>
       <Navbar />
       <div className="calculadora-container">
-        <div className="input-group">
+        <div className="finput-group">
           <input
             type="text"
             name="value1"

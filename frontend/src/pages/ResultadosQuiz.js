@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import '../styles/perguntas.css';
+import '../styles/resultados.css';
 import Button from '../components/Button';
 import { useNavigate } from 'react-router-dom';
+import Navbar from '../components/Navbar';
 
 import { getSomaTotal } from './Perguntas';
-
-// Importe o JSON diretamente
 import resultadosData from '../Resources/resultados.json';
 
 import logoArrojado from '../Resources/ganho.png';
@@ -16,19 +15,16 @@ export const ResultadosQuiz = () => {
   const soma_total = getSomaTotal();
   const navigate = useNavigate();
 
-  // Defina o índice com base no valor de soma_total
-  var i = 0;
+  let i = 0;
   if (soma_total >= 5 && soma_total <= 8) i = 0;
   else if (soma_total >= 9 && soma_total <= 12) i = 1;
   else i = 2;
 
-  // Altere os logos conforme o JSON
   const resultados = resultadosData.resultados.map((resultado, index) => ({
     ...resultado,
     imagem: index === 0 ? logoConservador : index === 1 ? logoModerado : logoArrojado
   }));
 
-  // Use useEffect to make a POST request when the component mounts
   useEffect(() => {
     const sendResults = async () => {
       try {
@@ -57,29 +53,21 @@ export const ResultadosQuiz = () => {
   }, [soma_total, resultados, i]);
 
   return (
-    <div className='container'>
-      <img 
-        src={resultados[i].imagem}
-        className='logo'
-        alt='logo'
-      />
-      <p>{resultados[i].mensagem}</p>
-      <Button text='Continuar' onClick={() => navigate('/profile')} />
-    </div>
+    <>
+      <Navbar />
+      <div className="center-wrapper">
+        <div className='container-resultados'>
+          <img 
+            src={resultados[i].imagem}
+            className='logo'
+            alt='logo'
+          />
+          <p>{resultados[i].mensagem}</p>
+          <button onClick={() => navigate('/profile')}>Continuar</button>
+        </div>
+      </div>
+    </>
   );
 };
 
 export default ResultadosQuiz;
-
-
-
-
-
-
-
-
-
-
-
-
-
