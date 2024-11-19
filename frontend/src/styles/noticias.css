@@ -68,3 +68,26 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
+.botao-toggle {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2db897;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    
+}
+
+.botao-toggle:hover {
+    background-color: #249f7d;
+    transform: translateY(-3px);
+}
+
+.botao-toggle:active {
+    transform: translateY(0px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
