@@ -37,7 +37,7 @@ const navigationBar = [
 
     {
         'name': 'Leitura',
-        'path': '/leitua',
+        'path': '/leitura',
         'className': 'normalLink'
     },
 

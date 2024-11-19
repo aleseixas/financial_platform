@@ -1,0 +1,24 @@
+/* Scoping all styles under a specific container */
+/* This is a good practice to avoid conflicts with other styles */
+/* Note that this is just a base file. From now on, I will work on the backend of our quantbot */
+
+
+.my-component {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+  }
+
+  
+  .my-component .text-container2 {
+    max-width: 600px;
+    padding: 20px;
+    line-height: 1.6;
+    text-align: justify;
+    font-size: 18px;
+  }
+  
+  
+  

@@ -8,12 +8,13 @@ import Perguntas from './pages/Perguntas';
 import ResultadosQuiz from './pages/ResultadosQuiz';
 import ProfilePage from './pages/ProfilePage';
 import HomePage from './pages/HomePage';
-
+import Leitura from './pages/Leitura';
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
 import Noticias from './pages/Noticias';
+
 
 const router = createBrowserRouter([
   {
@@ -46,12 +47,15 @@ const router = createBrowserRouter([
     path: '/home',
     element : <HomePage />
   },
-
   {
     path: '/Noticias',
     element: <Noticias/>
   },
-
+  {
+    path: '/leitura',
+    element : <Leitura />
+  },
+  
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
