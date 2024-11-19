@@ -8,6 +8,7 @@ import Perguntas from './pages/Perguntas';
 import ResultadosQuiz from './pages/ResultadosQuiz';
 import ProfilePage from './pages/ProfilePage';
 import HomePage from './pages/HomePage';
+import Cursos from './pages/Cursos';
 
 import {
   createBrowserRouter,
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
     path: '/Noticias',
     element: <Noticias/>
   },
+  {
+    path: '/Cursos',
+    element: <Cursos/>
+  }
 
 ]);
 
