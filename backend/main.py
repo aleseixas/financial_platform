@@ -27,7 +27,8 @@ def init_db():
         birthDay TEXT,
         birthMonth TEXT,
         birthYear TEXT,
-        gender TEXT
+        gender TEXT,
+        investidor TEXT
     )''')
     
     conn.commit()
@@ -56,6 +57,9 @@ class UserProfileUpdate(BaseModel):
     dataNascimento: str
     genero: str
     tipoInvestidor: str
+
+class UserQuizResult(BaseModel):
+    resultado: str
 
 authenticated_user_email = None  # Variable to store authenticated user's email
 
@@ -117,7 +121,7 @@ async def get_profile():
 
     conn = sqlite3.connect('users.db')
     cursor = conn.cursor()
-    cursor.execute("SELECT username, email, birthDay, birthMonth, birthYear, gender FROM users WHERE email = ?", (authenticated_user_email,))
+    cursor.execute("SELECT username, email, birthDay, birthMonth, birthYear, gender, investidor FROM users WHERE email = ?", (authenticated_user_email,))
     result = cursor.fetchone()
     conn.close()
 
@@ -128,7 +132,7 @@ async def get_profile():
     email = result[1]
     dataNascimento = f"{result[2]}/{result[3]}/{result[4]}"
     genero = result[5]
-    tipoInvestidor = "Moderado"  # This is a placeholder. Replace with actual logic to fetch 'tipoInvestidor'
+    tipoInvestidor = result[6]  # This is a placeholder. Replace with actual logic to fetch 'tipoInvestidor'
 
     return {
         "nome": nome,
@@ -152,9 +156,9 @@ async def update_profile(user: UserProfileUpdate):
     try:
         cursor.execute("""
             UPDATE users
-            SET username = ?, email = ?, birthDay = ?, birthMonth = ?, birthYear = ?, gender = ?
+            SET username = ?, email = ?, birthDay = ?, birthMonth = ?, birthYear = ?, gender = ?, investidor = ?
             WHERE email = ?
-        """, (user.nome, user.email, birthDay, birthMonth, birthYear, user.genero, authenticated_user_email))
+        """, (user.nome, user.email, birthDay, birthMonth, birthYear, user.genero, user.tipoInvestidor, authenticated_user_email))
         conn.commit()
     except sqlite3.Error as e:
         conn.close()
@@ -164,3 +168,28 @@ async def update_profile(user: UserProfileUpdate):
     conn.close()
     authenticated_user_email = user.email  # Update the authenticated user's email if it was changed
     return {"message": "Profile updated successfully!"}
+
+@app.post("/api/quizresult")
+async def quiz_result(user: UserQuizResult):
+    global authenticated_user_email
+    if not authenticated_user_email:
+        raise HTTPException(status_code=401, detail="User not authenticated")
+
+    conn = sqlite3.connect('users.db')
+    cursor = conn.cursor()
+
+    try:
+        cursor.execute("""
+            UPDATE users
+            SET investidor = ?
+            WHERE email = ?
+        """, (user.resultado, authenticated_user_email))
+        conn.commit()
+    except sqlite3.Error as e:
+        conn.close()
+        print(f"SQLite error: {e.args[0]}")  # Log the error message
+        raise HTTPException(status_code=500, detail=f"Update failed: {e.args[0]}")
+    
+    conn.close()
+    return {"message": "Investment type updated successfully!"}
+
