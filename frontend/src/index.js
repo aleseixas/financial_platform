@@ -10,12 +10,14 @@ import ProfilePage from './pages/ProfilePage';
 import HomePage from './pages/HomePage';
 import Cursos from './pages/Cursos';
 import Leitura from './pages/Leitura';
+import QuantBot from './pages/QuantBot';
+import Noticias from './pages/Noticias';
 
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Noticias from './pages/Noticias';
+
 
 
 const router = createBrowserRouter([
@@ -60,6 +62,10 @@ const router = createBrowserRouter([
   {
     path: '/leitura',
     element : <Leitura />
+  },
+  {
+    path: '/quantbot',
+    element : <QuantBot />
   }
 ]);
 

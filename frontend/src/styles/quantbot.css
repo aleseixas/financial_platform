@@ -1,0 +1,44 @@
+.calculadora-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    height: 100vh;
+    background-color: #e6f2ff;
+    font-family: Arial, sans-serif;
+  }
+  
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  input {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+    text-align: center;
+  }
+  
+  .fbutton {
+    padding: 12px 24px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #1e90ff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .fbutton:hover {
+    background-color: #1c86ee;
+  }
+  
+  .fbutton:active {
+    background-color: #1874cd;
+  }
+  
