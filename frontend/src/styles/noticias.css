@@ -1,21 +1,22 @@
 /* Container de notícias */
 .news-container {
-    margin:auto;
+    margin: auto;
     padding: 20px;
     background-color: #04043c; 
     color: white;
     text-align: center;
-  }
-  
-  /* Título da página */
-  .news-container h1 {
+}
+
+/* Título da página */
+.news-container h1 {
     color: white;
     font-size: 32px;
     margin-bottom: 30px;
-  }
-  
-  /* Estilo dos itens de notícias */
-  .news-item {
+}
+
+/* Estilo dos itens de notícias */
+.news-item {
+    position: relative; /* Necessário para o posicionamento absoluto do ícone */
     background-color: white; 
     color: #04043c; 
     padding: 20px;
@@ -23,38 +24,31 @@
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: left;
-  }
-  
-  /* Estilo das imagens nas notícias */
-  .news-item img {
+}
+
+/* Estilo das imagens nas notícias */
+.news-item img {
     width: 100%;
     height: auto;
     max-height: 300px;
     object-fit: cover;
     margin-bottom: 15px;
     border-radius: 10px;
-  }
-  
-  /* Estilo dos títulos das notícias */
-  .news-item h3 {
+}
+
+/* Estilo dos títulos das notícias */
+.news-item h3 {
     font-size: 22px;
     margin-bottom: 10px;
-  }
-  
-  /* Estilo do texto das notícias */
-  .news-item p {
+}
+
+/* Estilo do texto das notícias */
+.news-item p {
     font-size: 16px;
     margin-bottom: 20px;
-  }
-  
-  /* Estilo dos links das notícias */
-  .news-item a {
-    color: #2db897; 
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  /* Estilo base do botão */
+}
+
+/* Estilo dos links das notícias */
 .news-item a {
     display: inline-block;
     padding: 10px 20px;
@@ -64,13 +58,36 @@
     font-weight: bold;
     border-radius: 5px; 
     transition: background-color 0.3s ease, transform 0.3s ease;
-  }
-  
-  /* Efeito hover para o botão */
-  .news-item a:hover {
+}
+
+/* Efeito hover para o botão */
+.news-item a:hover {
     background-color: #249a7f; 
     text-decoration: none; 
     transform: translateY(-2px); 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-  }
-  
+}
+
+.botao-toggle {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2db897;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    
+}
+
+.botao-toggle:hover {
+    background-color: #249f7d;
+    transform: translateY(-3px);
+}
+
+.botao-toggle:active {
+    transform: translateY(0px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
