@@ -1,24 +1,27 @@
-/* Scoping all styles under a specific container */
-/* This is a good practice to avoid conflicts with other styles */
-/* Note that this is just a base file. From now on, I will work on the backend of our quantbot */
+.leitura-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
 
+.text-container {
+  margin: 20px 0;
+}
 
-.my-component {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: Arial, sans-serif;
-  }
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
 
-  
-  .my-component .text-container2 {
-    max-width: 600px;
-    padding: 20px;
-    line-height: 1.6;
-    text-align: justify;
-    font-size: 18px;
-  }
-  
-  
-  
+.navigation-buttons button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.navigation-buttons button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
