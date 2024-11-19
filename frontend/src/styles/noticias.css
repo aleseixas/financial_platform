@@ -2,7 +2,7 @@
 .news-container {
     margin: auto;
     padding: 20px;
-    background-color: #04043c; 
+    background-color: #04043c; /* Azul escuro */
     color: white;
     text-align: center;
 }
@@ -16,9 +16,9 @@
 
 /* Estilo dos itens de notícias */
 .news-item {
-    position: relative; /* Necessário para o posicionamento absoluto do ícone */
-    background-color: white; 
-    color: #04043c; 
+    position: relative;
+    background-color: white;
+    color: #04043c;
     padding: 20px;
     margin-bottom: 3%;
     border-radius: 10px;
@@ -52,26 +52,28 @@
 .news-item a {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #2db897; 
-    color: white; 
+    background-color: #2db897; /* Verde água */
+    color: white;
     text-decoration: none;
     font-weight: bold;
-    border-radius: 5px; 
+    border-radius: 5px;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 /* Efeito hover para o botão */
 .news-item a:hover {
-    background-color: #249a7f; 
-    text-decoration: none; 
-    transform: translateY(-2px); 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    background-color: #249a7f;
+    text-decoration: none;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Estilo para o botão de alternância "Mostrar Notícias Salvas" */
+/* Botão de alternância "Mostrar Notícias Salvas" */
 .botao-toggle {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #2db897;
+    background-color: #00003a; /* Azul escuro semelhante ao fundo */
     color: white;
     text-decoration: none;
     font-weight: bold;
@@ -79,15 +81,45 @@
     transition: background-color 0.3s ease, transform 0.3s ease;
     cursor: pointer;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    
+    margin-top: 20px; /* Adiciona espaço acima do botão */
+    margin-bottom: 20px; /* Espaço inferior para separar dos elementos abaixo */
 }
 
+/* Efeito hover para o botão de alternância */
 .botao-toggle:hover {
-    background-color: #249f7d;
+    background-color: #202060; /* Azul mais claro */
     transform: translateY(-3px);
 }
 
+/* Efeito ao pressionar o botão */
 .botao-toggle:active {
+    transform: translateY(0px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Botões de tópicos */
+.topic-buttons button {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #2db897; /* Verde água */
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Efeito hover para botões de tópicos */
+.topic-buttons button:hover {
+    background-color: #249a7f;
+    transform: translateY(-2px);
+}
+
+/* Efeito ao pressionar botões de tópicos */
+.topic-buttons button:active {
     transform: translateY(0px);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
