@@ -37,7 +37,7 @@ const Cursos = () => {
     <>
       <Navbar />
       <div className="news-container">
-        <h1>Últimas notícias sobre Bolsa de Valores e Análise Quantitativa</h1>
+        <h1>Explore novos Cursos!</h1>
         {loading ? (
           <p>Carregando notícias...</p>
         ) : (
