@@ -1,0 +1,42 @@
+[
+  {
+    "pergunta": "1. Qual é o seu principal objetivo ao investir?",
+    "alternativas": [
+      "a) Preservar meu capital, mesmo que o retorno seja menor.",
+      "b) Obter um equilíbrio entre segurança e crescimento.",
+      "c) Buscar altos retornos, mesmo que isso signifique correr riscos maiores."
+    ]
+  },
+  {
+    "pergunta": "2. Em quanto tempo você espera recuperar seus investimentos?",
+    "alternativas": [
+      "a) Curto prazo (menos de 3 anos).",
+      "b) Médio prazo (entre 3 e 5 anos).",
+      "c) Longo prazo (mais de 5 anos)."
+    ]
+  },
+  {
+    "pergunta": "3. Em que tipo de investimentos você se sente mais confortável?",
+    "alternativas": [
+      "a) Títulos de renda fixa e CDBs.",
+      "b) Fundos multimercado que combinam renda fixa e variável.",
+      "c) Ações, fundos de investimento agressivos e criptomoedas."
+    ]
+  },
+  {
+    "pergunta": "4. Como você se sentiria se seus investimentos sofressem uma queda de 20% em um curto período?",
+    "alternativas": [
+      "a) Muito preocupado. Consideraria vendê-los para evitar um prejuízo maior.",
+      "b) Preocupado. No entanto, manteria os investimentos esperando uma recuperação.",
+      "c) Tranquilo. Enxergaria isso como uma oportunidade para comprar mais ativos."
+    ]
+  },
+  {
+    "pergunta": "5. Quais opções você considera ao pensar em um investimento?",
+    "alternativas": [
+      "a) Prefiro opções já conhecidas e seguras, nas quais sei exatamente o que esperar.",
+      "b) Gosto de considerar novas oportunidades, mas prefiro avaliar bem antes de decidir.",
+      "c) Estou sempre buscando novas ideias, disposto a experimentar algo inovador e arriscado."
+    ]
+  }
+]

@@ -1,0 +1,49 @@
+/* Estilo para o container da página */
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #0b0b42; /* Fundo escuro como o da imagem */
+  }
+  
+  /* Card do perfil */
+  .profile-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 400px;
+  }
+  
+  /* Título */
+  .profile-card h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* Parágrafos */
+  .profile-card p {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #333;
+  }
+  
+  /* Botão para editar o perfil */
+  .btn_editar {
+    background-color: #1abc9c; /* Verde */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn_editar:hover {
+    background-color: #16a085; /* Cor de hover */
+  }
+  

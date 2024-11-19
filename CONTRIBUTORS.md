@@ -1,11 +1,5 @@
-* Joao (RA260542)
-* Gabriel (RA217600)
-<<<<<<< HEAD
-* Daniel (RA260542)
-* Joao (RA260542)
-* ZEB (RA260542)
-=======
-* Daniel (RA260542)
-* Joao (RA260542)
-* ZEB (RA260542)
->>>>>>> atualizaContrib
+* Gabriel Viterbo 217600 
+* Lucas Martiniano 231036 
+* Alexandre Seixas 260355 
+* João Guimarães 260542 
+* Daniel da Cruz Vieira 260398 
