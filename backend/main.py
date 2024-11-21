@@ -198,8 +198,8 @@ async def quiz_result(user: UserQuizResult):
     conn.close()
     return {"message": "Investment type updated successfully!"}
 
-@app.get("/api/simulateStrategy")
-async def simulateStrategy(ticker: Ticker) -> List:
+@app.post("/api/simulateStrategy")
+async def simulateStrategy(ticker: Ticker):
     simulatedResult = applyStrategy([ticker.tickerName])[0]
     simulatedResult = simulatedResult['Total Return'].to_list()
-    return simulatedResult
+    return {'values': simulatedResult}

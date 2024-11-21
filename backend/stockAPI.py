@@ -19,7 +19,7 @@ def getRelativeReturn(stocks: List):
   
   return stocks
 
-def movingAvarageCalculator(stocks: List, windowSizeFast = 42, windowSizeSlow = 200) -> List:
+def movingAvarageCalculator(stocks: List, windowSizeFast = 42, windowSizeSlow = 252) -> List:
   for stock in stocks:
     stock['MAF'] = stock['Close'].rolling(windowSizeFast).mean()
     stock['MAS'] = stock['Close'].rolling(windowSizeSlow).mean()
