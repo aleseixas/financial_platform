@@ -54,3 +54,9 @@ def applyStrategy(tickersList: List):
   results = getReturns(stocks)
   results = getTotalReturn(results)
   return results
+
+def getHistoricalReturns(stocks: List):
+  for stock in stocks:
+    stock['Returns'] = stock['Relative Returns'].cumsum()
+  
+  return stocks
