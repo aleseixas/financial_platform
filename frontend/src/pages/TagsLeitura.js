@@ -128,7 +128,7 @@ const TagsLeitura = () => {
     // noticiasFiltradas = []
     noticiasFiltradas.length = 0;
     noticias.forEach(noticia => {
-      if (noticia.tags.includes(value)) {
+      if (noticia.tags.includes(value) || noticia.dificuldade === value) {
           noticiasFiltradas.push(noticia);
       }
      },
