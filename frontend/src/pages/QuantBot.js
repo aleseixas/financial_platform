@@ -111,6 +111,7 @@ const QuantBot = () => {
   return (
     <>
       <Navbar />
+<<<<<<< HEAD
       <DivAlinhamentoCentro 
         reactComponentToBeAligned={
         <Select 
@@ -147,6 +148,41 @@ const QuantBot = () => {
         />
       }
 
+=======
+      <div className="calculadora-container">
+        <div className="finput-group">
+          <input
+            type="text"
+            name="value1"
+            value={values.value1}
+            onChange={handleChange}
+            placeholder="Enter value 1"
+          />
+          <input
+            type="text"
+            name="value2"
+            value={values.value2}
+            onChange={handleChange}
+            placeholder="Enter value 2"
+          />
+          <input
+            type="text"
+            name="value3"
+            value={values.value3}
+            onChange={handleChange}
+            placeholder="Enter value 3"
+          />
+          <input
+            type="text"
+            name="value4"
+            value={values.value4}
+            onChange={handleChange}
+            placeholder="Enter value 4"
+          />
+        </div>
+        <button className="fbutton" onClick={handleClick}>Click Me!</button>
+      </div>
+>>>>>>> 1e17c1eee047e764f9542c993d5ec85325a019f9
     </>
   );
 };
