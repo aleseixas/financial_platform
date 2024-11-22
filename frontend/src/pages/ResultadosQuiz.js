@@ -11,6 +11,7 @@ import resultadosData from '../Resources/resultados.json';
 import logoArrojado from '../Resources/ganho.png';
 import logoModerado from '../Resources/balanca-de-justica.png';
 import logoConservador from '../Resources/cofre.png';
+import Navbar from '../components/Navbar';
 
 export const ResultadosQuiz = () => {
   const soma_total = getSomaTotal();
@@ -57,6 +58,8 @@ export const ResultadosQuiz = () => {
   }, [soma_total, resultados, i]);
 
   return (
+    <>
+    <Navbar />
     <div className='container'>
       <img 
         src={resultados[i].imagem}
@@ -66,6 +69,7 @@ export const ResultadosQuiz = () => {
       <p>{resultados[i].mensagem}</p>
       <Button text='Continuar' onClick={() => navigate('/profile')} />
     </div>
+    </>
   );
 };
 
