@@ -4,13 +4,6 @@ import { Link } from 'react-router-dom'
 import '../styles/navbar.css'
 
 const navigationBar = [
-
-    {
-        'name': 'Home',
-        'path': '/home',
-        'className': 'normalLink',
-    },
-
     {
         'name': 'Profile',
         'path': '/profile',
@@ -30,20 +23,19 @@ const navigationBar = [
     },
 
     {
-        'name': 'Exercicios',
-        'path': '/exercicios',
-        'className': 'normalLink'
-    },
-
-    {
         'name': 'Leitura',
-        'path': '/leitua',
+        'path': '/leitura',
         'className': 'normalLink'
     },
 
     {
         'name': 'Noticias',
         'path': '/noticias',
+        'className': 'normalLink'
+    },
+    {
+        'name': 'Quiz',
+        'path': '/quiz',
         'className': 'normalLink'
     },
 

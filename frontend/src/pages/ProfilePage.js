@@ -1,23 +1,88 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../styles/profilepage.css';
 import Navbar from '../components/Navbar';  
 import Button from '../components/Button';
 
 const ProfilePage = () => {
-  // Estado para controlar se está em modo de edição ou não
   const [editando, setEditando] = useState(false);
-
-  // Estados para armazenar os valores dos campos do perfil
-  const [nome, setNome] = useState('João Silva');
-  const [email, setEmail] = useState('joao.silva@example.com');
-  const [dataNascimento, setDataNascimento] = useState('15/08/1990');
-  const [genero, setGenero] = useState('Masculino');
-  const[tipo_investidor,setTipoInvestidor] = useState('Moderado')
+  const [nome, setNome] = useState('');
+  const [email, setEmail] = useState('');
+  const [dataNascimento, setDataNascimento] = useState('');
+  const [genero, setGenero] = useState('');
+  const [tipoInvestidor, setTipoInvestidor] = useState('');
 
   // Função para alternar entre modo de edição e modo de visualização
   const handleEditClick = () => {
+    if(editando){
+      try {
+        fetch('http://localhost:8000/api/updateprofile', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            nome,
+            email,
+            dataNascimento,
+            genero,
+            tipoInvestidor,
+          }),
+        });
+      }
+      catch (error) {
+        console.error('Error updating profile data:', error);
+      }
+    }
     setEditando((prevEditando) => !prevEditando); // Alterna entre true e false
   };
+
+  // Função para lidar com mudanças nos inputs
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    switch (name) {
+      case 'nome':
+        setNome(value);
+        break;
+      case 'email':
+        setEmail(value);
+        break;
+      case 'dataNascimento':
+        setDataNascimento(value);
+        break;
+      case 'genero':
+        setGenero(value);
+        break;
+      case 'tipoInvestidor':
+        setTipoInvestidor(value);
+        break;
+      default:
+        break;
+    }
+  };
+
+  // Fetch profile data from backend when component mounts
+  useEffect(() => {
+    const fetchProfileData = async () => {
+      try {
+        const response = await fetch('http://localhost:8000/api/getprofile', {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        });
+        const data = await response.json();
+        setNome(data.nome);
+        setEmail(data.email);
+        setDataNascimento(data.dataNascimento);
+        setGenero(data.genero);
+        setTipoInvestidor(data.tipoInvestidor);
+      } catch (error) {
+        console.error('Error fetching profile data:', error);
+      }
+    };
+
+    fetchProfileData();
+  }, []);
 
   return (
     <>
@@ -29,29 +94,28 @@ const ProfilePage = () => {
           {editando ? (
             <>
               <p>
-                Nome: <input type="text" value={nome} onChange={(e) => setNome(e.target.value)} />
+                Nome: <input type="text" name="nome" value={nome} onChange={handleChange} />
               </p>
               <p>
-                Email: <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                Email: <input type="email" name="email" value={email} onChange={handleChange} />
               </p>
               <p>
-                Data de Nascimento: <input type="text" value={dataNascimento} onChange={(e) => setDataNascimento(e.target.value)} />
+                Data de Nascimento: <input type="text" name="dataNascimento" value={dataNascimento} onChange={handleChange} />
               </p>
               <p>
                 Gênero: 
-                <select value={genero} onChange={(e) => setGenero(e.target.value)}>
+                <select name="genero" value={genero} onChange={handleChange}>
                   <option value="Masculino">Masculino</option>
                   <option value="Feminino">Feminino</option>
                   <option value="Outro">Outro</option>
                 </select>
               </p>
-
               <p>
-                Tipo Investidor:
-                <select value = {tipo_investidor} onChange={(e) => setTipoInvestidor(e.target.value)}>
+                Tipo Investidor: 
+                <select name="tipoInvestidor" value={tipoInvestidor} onChange={handleChange}>
                   <option value="Conservador">Conservador</option>
                   <option value="Moderado">Moderado</option>
-                  <option value="Arrojado">Arrojado</option>
+                  <option value="Agressivo">Agressivo</option>
                 </select>
               </p>
             </>
@@ -61,8 +125,7 @@ const ProfilePage = () => {
               <p>Email: {email}</p>
               <p>Data de Nascimento: {dataNascimento}</p>
               <p>Gênero: {genero}</p>
-              <p>Tipo Investidor: {tipo_investidor}</p>
-              
+              <p>Tipo Investidor: {tipoInvestidor}</p>
             </>
           )}
 

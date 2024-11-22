@@ -8,11 +8,17 @@ import Perguntas from './pages/Perguntas';
 import ResultadosQuiz from './pages/ResultadosQuiz';
 import ProfilePage from './pages/ProfilePage';
 import HomePage from './pages/HomePage';
+import Cursos from './pages/Cursos';
+import Leitura from './pages/Leitura';
+import QuantBot from './pages/QuantBot';
+import Noticias from './pages/Noticias';
 
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+
+
 
 const router = createBrowserRouter([
   {
@@ -44,6 +50,22 @@ const router = createBrowserRouter([
   {
     path: '/home',
     element : <HomePage />
+  },
+  {
+    path: '/Noticias',
+    element: <Noticias/>
+  },
+  {
+    path: '/Cursos',
+    element: <Cursos/>
+  },
+  {
+    path: '/leitura',
+    element : <Leitura />
+  },
+  {
+    path: '/quantbot',
+    element : <QuantBot />
   }
 ]);
 
