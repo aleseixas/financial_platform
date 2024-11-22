@@ -6,6 +6,7 @@ import { getNoticiasFiltradas } from './TagsLeitura';
 const noticiasFiltradas = getNoticiasFiltradas();
 
 const Leitura = () => {
+
   const [indiceAtual, setIndiceAtual] = useState(0);
 
   const proximaNoticia = () => {
