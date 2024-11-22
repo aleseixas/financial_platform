@@ -54,6 +54,7 @@ export const ResultadosQuiz = () => {
 
   return (
     <>
+
       <Navbar />
       <div className="center-wrapper">
         <div className='container-resultados'>
