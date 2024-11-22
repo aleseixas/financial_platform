@@ -115,7 +115,7 @@ const ProfilePage = () => {
                 <select name="tipoInvestidor" value={tipoInvestidor} onChange={handleChange}>
                   <option value="Conservador">Conservador</option>
                   <option value="Moderado">Moderado</option>
-                  <option value="Agressivo">Agressivo</option>
+                  <option value="Arrojado">Arrojado</option>
                 </select>
               </p>
             </>
