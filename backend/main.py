@@ -3,6 +3,8 @@ from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
 import sqlite3
 import bcrypt
+from stockAPI import applyStrategy
+from typing import List
 
 app = FastAPI()
 
@@ -60,6 +62,9 @@ class UserProfileUpdate(BaseModel):
 
 class UserQuizResult(BaseModel):
     resultado: str
+
+class Ticker(BaseModel):
+    tickerName: str
 
 authenticated_user_email = None  # Variable to store authenticated user's email
 
@@ -193,3 +198,8 @@ async def quiz_result(user: UserQuizResult):
     conn.close()
     return {"message": "Investment type updated successfully!"}
 
+@app.post("/api/simulateStrategy")
+async def simulateStrategy(ticker: Ticker):
+    simulatedResult = applyStrategy([ticker.tickerName])[0]
+    simulatedResult = simulatedResult['Total Return'].to_list()
+    return {'values': simulatedResult}
