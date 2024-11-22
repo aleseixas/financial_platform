@@ -1,0 +1,108 @@
+/* Tags */
+.tags {
+  display: flex;
+  flex-direction: column; /* Organiza as tags em uma coluna */
+  align-items: center; /* Centraliza os botões horizontalmente */
+  gap: 10px; /* Espaçamento entre os botões */
+  margin-bottom: 40px; /* Espaçamento maior para separar das dificuldades */
+}
+
+/* Botões das Tags */
+.tag-b {
+  background-color: #14A586F7;
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 200px; /* Largura uniforme */
+  text-align: center; /* Centraliza o texto dentro do botão */
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.tag-b:hover {
+  background: linear-gradient(to right, #14A586F7, #3ad5b4f7);
+  transform: scale(1.05); /* Efeito de zoom no hover */
+}
+
+/* Container Geral */
+.leitura-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Container de Texto */
+.text-container {
+  margin: 20px 0;
+}
+
+/* Navegação */
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.navigation-buttons button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.navigation-buttons button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* Dificuldades */
+.Dificuldade {
+  display: flex;
+  flex-direction: column; /* Organiza os botões verticalmente */
+  align-items: center; /* Centraliza os botões horizontalmente */
+  gap: 20px; /* Espaçamento maior entre os botões */
+  margin-top: 20px;
+}
+
+/* Botões de Dificuldade */
+.nivel-i,
+.nivel-m {
+  width: 500px; /* Largura padrão */
+  height: 100px; /* Altura menor */
+  background-color: #14A586F7;
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px; /* Tamanho da fonte */
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.nivel-a {
+  width: 500px; /* Maior largura para destacar */
+  height: 100px; /* Altura igual para uniformidade */
+  background-color: #14A586F7;
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px; /* Tamanho da fonte */
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover para os Níveis */
+.nivel-i:hover,
+.nivel-m:hover,
+.nivel-a:hover {
+  background: linear-gradient(to right, #14A586F7, #3ad5b4f7);
+  transform: scale(1.05); /* Efeito de zoom no hover */
+}
