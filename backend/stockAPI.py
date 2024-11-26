@@ -16,7 +16,7 @@ def getTickers(tickers: List, periodDefined = '10y') -> List:
 def getRelativeReturn(stocks: List):
   for stock in stocks:
     stock['Relative Returns'] = (stock['Close'] / stock['Open']) - 1
-  
+    stock['Cumulative Return'] = 100 * stock['Relative Returns'].cumsum()  
   return stocks
 
 def movingAvarageCalculator(stocks: List, windowSizeFast = 42, windowSizeSlow = 252) -> List:
@@ -51,12 +51,13 @@ def applyStrategy(tickersList: List):
   stocks = getRelativeReturn(stocks)
   stocks = movingAvarageCalculator(stocks)
   stocks = getSignals(stocks)
-  results = getReturns(stocks)
-  results = getTotalReturn(results)
-  return results
+  stocks = getReturns(stocks)
+  stocks = getHistoricalReturns(stocks)
+  stocks = getTotalReturn(stocks)
+  return stocks
 
 def getHistoricalReturns(stocks: List):
   for stock in stocks:
-    stock['Returns'] = stock['Relative Returns'].cumsum()
+    stock['Returns'] = 100 * stock['Relative Returns'].cumsum()
   
   return stocks
