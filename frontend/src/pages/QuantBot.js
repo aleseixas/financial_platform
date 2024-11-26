@@ -113,7 +113,7 @@ const QuantBot = () => {
           y: {
             title: {
               display: true,
-              text: 'Ganho da estratégia',
+              text: 'Ganho da estratégia (em porcentagem)',
             },
             beginAtZero: true,
             position: 'left',
@@ -121,7 +121,7 @@ const QuantBot = () => {
           y1: {
             title:{
               display: true,
-              text: 'Ganho da ação'
+              text: 'Ganho da ação (em porcentagem)'
             },
 
             beginAtZero: true,
