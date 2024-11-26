@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar';
 import Select from 'react-select'
 import Button from '../components/Button';
 import DivAlinhamentoCentro from '../components/DivAlinhamentoCentro';
+import InfoBox from '../components/InfoBox';
 import { Line } from 'react-chartjs-2';
 import {
   Chart as ChartJS,
@@ -15,7 +16,7 @@ import {
   Tooltip,
   Legend,
 } from 'chart.js';
-
+import { readUsedSize } from 'chart.js/helpers';
 // Ative os componentes do Chart.js
 ChartJS.register(LineElement, PointElement, LinearScale, Title, CategoryScale, Tooltip, Legend);
 
@@ -24,7 +25,9 @@ const optionsList = [
   { value: 'MSFT', label: 'Microsoft' },
   { value: 'GE', label: 'General Electric' },
   { value: 'MRNA', label: 'Moderna' },
-  { value: 'WBD', label: 'Warner Bros'}
+  { value: 'WBD', label: 'Warner Bros'},
+  { value: 'PETR4.SA', label: 'Petrobras'},
+  { value: 'ABEV3.SA', label: 'Ambev'}
 ]
 
 const callSimulateStrategy = async (option) => {
@@ -40,7 +43,11 @@ const callSimulateStrategy = async (option) => {
   }
   
   const result = await response.json();
-  return result.values;
+  
+  return {
+    'values': result.values,
+    'returns': result.returns
+  }
 }
 
 const QuantBot = () => {
@@ -48,7 +55,8 @@ const QuantBot = () => {
   const [error, setError] = useState(false);
   const [config, setConfig] = useState(null);
   const [historicalData, setHistoricalData] = useState(null);
-
+  const [cumulativeReturn, setCumulativeReturn] = useState(null);
+  const [strategyReturn, setStrategyReturn] = useState(null);
   const handleChange = (option) => {
     if (error) {
       setError(false);
@@ -62,16 +70,26 @@ const QuantBot = () => {
     }
     else {
       const response = await callSimulateStrategy(selectedOption);
-      const labels = await response.map((_, index) => index);
+      const result = response.values;
+      const returns = response.returns;
+      const labels = await result.map((_, index) => index);
 
       const data = {
         labels,
         datasets: [
           {
-            label: 'Retorno ao longo do tempo',
-            data: response,
+            label: 'Retorno da estratégia',
+            data: result,
             borderColor: 'rgba(75, 192, 192, 1)',
-            tension: 0.4
+            tension: 0.4,
+            yAxisID: 'y'
+          },
+          {
+            label: 'Retorno da ação',
+            data: returns,
+            borderColor: 'rgba(206, 19, 19, 0.8)',
+            tension: 0.4,
+            yAxisID: 'y1'
           }
         ]
       }
@@ -89,24 +107,42 @@ const QuantBot = () => {
           x: {
             title: {
               display: true,
-              text: 'Tempo',
+              text: 'Tempo em dias (início: 10 anos atrás)',
             },
           },
           y: {
             title: {
               display: true,
-              text: 'Valor',
+              text: 'Ganho da estratégia',
             },
             beginAtZero: true,
+            position: 'left',
           },
+          y1: {
+            title:{
+              display: true,
+              text: 'Ganho da ação'
+            },
+
+            beginAtZero: true,
+            position: 'right',
+            grid: {
+              display: false,
+            },
+            ticks: {
+              display: true
+            }
+          }
         },
       };
       setHistoricalData(data);
       setConfig(options);
-
+      setCumulativeReturn(returns.pop());
+      setStrategyReturn(result.pop())
     }
     
   };
+
 
   return (
     <>
@@ -145,6 +181,22 @@ const QuantBot = () => {
             <Line className='grafico' data={historicalData} options={config}/>
           }
         />
+      }
+
+      {cumulativeReturn && strategyReturn &&
+        
+        <DivAlinhamentoCentro 
+          reactComponentToBeAligned={
+            <InfoBox 
+            componentList={[
+              <p style={{'fontSize': '20px', 'text-align': 'center', 'margin': '5px'}}>Resumo de ganhos</p>,
+              <div style={{'fontSize': '20px', 'boxShadow': '0 5px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05)', 'padding': '5px', 'margin': '5px'}}>Ganho acumulado da estratégia: {Number(strategyReturn).toFixed(2)}%</div>,
+              <div style={{'fontSize': '20px', 'boxShadow': '0 5px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05)', 'padding': '5px', 'margin': '5px'}}>Ganho acumulado da ação: {Number(cumulativeReturn).toFixed(2)}%</div>
+            ]}
+            />
+          }
+        />
+        
       }
 
     </>

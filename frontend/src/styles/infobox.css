@@ -1,0 +1,15 @@
+.infobox {
+  max-width: 30vw;
+  max-height: 40vh;
+  min-width: 15vw;
+  min-height: 20vh;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-top: 10px;
+  background-color: white;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+}
