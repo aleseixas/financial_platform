@@ -1,0 +1,33 @@
+.container-brabo-da-home {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #0a0a3f;
+}
+.feature {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* Creates 4 buttons per row */
+    gap: 10px; /* Space between buttons */
+    justify-content: center; /* Centers the grid */
+    margin-bottom: 0px; /* Spacing between tags and difficulty buttons */
+  }
+
+.feature-b {
+    background-color: #14A586F7;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%; /* Button width adjusts to the grid */
+    text-align: center; /* Centers text inside the button */
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  .feature-b:hover {
+    background: linear-gradient(to right, #14A586F7, #3ad5b4f7);
+    transform: scale(1.05); /* Slight zoom effect on hover */
+  }
