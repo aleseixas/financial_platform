@@ -19,14 +19,8 @@ const HomePage = () => {
     else if (value === "Cursos") feature = 2;
     else if (value === "Quiz") feature = 3;
     else if (value === "QuantBot") feature = 4;
-    navigate('/descricoes')
+    navigate('/descricoes');
   };
-  
-  
-  
-  
-  
-  
   
   return (
     <>

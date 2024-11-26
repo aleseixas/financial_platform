@@ -4,11 +4,11 @@ import Navbar from '../components/Navbar'
 import { useNavigate } from 'react-router-dom';
 import { getFeature } from './HomePage'
 
-const feature = getFeature()
 
 export const Descricoes = () => {
     const navigate = useNavigate();
     const [activeText, setActiveText] = useState('');
+    const feature = getFeature();
 
     const textos = [
         "<b>Leituras:</b> Aqui, você encontra textos didáticos relacionados ao mundo das finanças, organizados por assuntos e dificuldade. Para acessá-los, basta selecionar o assunto no qual você está interessado ou, alternativamente, a dificuldade que considera ser a mais apropriada para você!",
