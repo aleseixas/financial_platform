@@ -22,7 +22,7 @@ const Leitura = () => {
   };
   return (
     <>
-    
+    <Navbar/>
     <div className="leitura-container">
       <h1>{noticiasFiltradas[indiceAtual].titulo}</h1>
       <h3>Por {noticiasFiltradas[indiceAtual].autor}</h3>
