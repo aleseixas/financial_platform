@@ -190,8 +190,8 @@ const QuantBot = () => {
             <InfoBox 
             componentList={[
               <p style={{'fontSize': '20px', 'text-align': 'center', 'margin': '5px'}}>Resumo de ganhos</p>,
-              <div style={{'fontSize': '20px', 'boxShadow': '0 5px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05)', 'padding': '5px', 'margin': '5px'}}>Ganho acumulado da estratégia: {Number(strategyReturn).toFixed(2)}%</div>,
-              <div style={{'fontSize': '20px', 'boxShadow': '0 5px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05)', 'padding': '5px', 'margin': '5px'}}>Ganho acumulado da ação: {Number(cumulativeReturn).toFixed(2)}%</div>
+              <div style={{'fontSize': '20px', 'borderRadius': '5px', 'boxShadow': '0 5px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1)', 'padding': '5px', 'margin': '5px'}}>Ganho acumulado da estratégia: {Number(strategyReturn).toFixed(2)}%</div>,
+              <div style={{'fontSize': '20px', 'borderRadius': '5px', 'boxShadow': '0 5px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1)', 'padding': '5px', 'margin': '5px'}}>Ganho acumulado da ação: {Number(cumulativeReturn).toFixed(2)}%</div>
             ]}
             />
           }
