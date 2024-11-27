@@ -33,17 +33,17 @@
     margin-bottom: 20px;
   }
   
-  button {
-    background-color: #00c18c;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
+button {
+  background-color: #00c18c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+}
   
-  button:hover {
-    background-color: #00a375;
-  }
-  
+button:hover {
+  background-color: #00a375;
+}
