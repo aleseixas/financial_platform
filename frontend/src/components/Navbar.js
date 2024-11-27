@@ -59,6 +59,27 @@ const navigationBar = [
 ]
 
 const Navbar = () => {
+  const handleClick = async () => {
+    try {
+      const response = await fetch('http://localhost:8000/api/logout', {
+        method: 'GET', // This is the default, so you can omit it
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+
+      const data = await response.json();
+      console.log(data);
+    } catch (error) {
+      console.error('There was a problem with the fetch operation:', error);
+    }
+  };  
+
+
   return (
     <header className='header'>
         <div className='imagem'>
@@ -83,6 +104,9 @@ const Navbar = () => {
                 }
             </ul>
         </nav>
+        <div className='logout'>
+            <Link onClick={(e) => { e.preventDefault(); handleClick();}} className='logoutLink'>Logout</Link>            
+        </div>
     </header>
   )
 }

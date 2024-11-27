@@ -208,4 +208,8 @@ async def simulateStrategy(ticker: Ticker):
         'returns': rawReturn
     }
         
-        
+@app.get("/api/logout")
+async def logout():
+    global authenticated_user_email
+    authenticated_user_email = None
+    return {"message": "User logged out successfully!"}        

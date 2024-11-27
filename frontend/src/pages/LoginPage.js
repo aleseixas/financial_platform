@@ -42,7 +42,7 @@ const Login = () => {
     }
 
     // if there are no errors we redirect to this page
-    navigate('/profile');
+    navigate('/home');
   };
 
   return (

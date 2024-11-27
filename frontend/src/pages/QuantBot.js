@@ -16,7 +16,6 @@ import {
   Tooltip,
   Legend,
 } from 'chart.js';
-import { readUsedSize } from 'chart.js/helpers';
 // Ative os componentes do Chart.js
 ChartJS.register(LineElement, PointElement, LinearScale, Title, CategoryScale, Tooltip, Legend);
 
