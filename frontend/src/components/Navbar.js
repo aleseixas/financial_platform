@@ -5,6 +5,11 @@ import '../styles/navbar.css'
 
 const navigationBar = [
     {
+        'name': 'Home',
+        'path': '/home',
+        'className': 'normalLink'
+    },
+    {
         'name': 'Profile',
         'path': '/profile',
         'className': 'normalLink'

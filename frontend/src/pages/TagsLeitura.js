@@ -190,7 +190,7 @@ const TagsLeitura = () => {
     <>
       <Navbar />
 
-      <div className="container">
+      <div className="container-brabo">
       <div className="tags">
         <button className="tag-b" onClick={handleButtonClick}>Finanças</button>
         <button className="tag-b" onClick={handleButtonClick}>Perfil Investidor</button>
@@ -202,6 +202,8 @@ const TagsLeitura = () => {
         <button className="tag-b" onClick={handleButtonClick}>Câmbio</button>
         <button className="tag-b" onClick={handleButtonClick}>Investimentos</button>
       </div>
+
+
       <div className='Dificuldade'>
 
         <button className='nivel-i' onClick={handleButtonClick}>Iniciante</button>
@@ -209,6 +211,8 @@ const TagsLeitura = () => {
         <button className='nivel-a' onClick={handleButtonClick}>Avançado</button>
 
       </div>
+
+      
       <div className="content">
         {activeText ? (
           <div className="content-text">{activeText}</div>

@@ -13,6 +13,7 @@ import Leitura from './pages/Leitura';
 import QuantBot from './pages/QuantBot';
 import Noticias from './pages/Noticias';
 import TagsLeitura from './pages/TagsLeitura';
+import Descricoes from './pages/Descricoes';
 
 import {
   createBrowserRouter,
@@ -71,6 +72,10 @@ const router = createBrowserRouter([
   {
     path: '/quantbot',
     element : <QuantBot />
+  },
+  {
+    path: '/descricoes',
+    element : <Descricoes/>
   }
 ]);
 

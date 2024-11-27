@@ -1,10 +1,17 @@
 /* Tags */
 .tags {
-  display: flex;
-  flex-direction: column; /* Organiza as tags em uma coluna */
-  align-items: center; /* Centraliza os botões horizontalmente */
-  gap: 10px; /* Espaçamento entre os botões */
-  margin-bottom: 40px; /* Espaçamento maior para separar das dificuldades */
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); /* Creates 4 buttons per row */
+  gap: 10px; /* Space between buttons */
+  justify-content: center; /* Centers the grid */
+  margin-bottom: 0px; /* Spacing between tags and difficulty buttons */
+}
+.container-brabo {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #0a0a3f;
 }
 
 /* Botões das Tags */
@@ -17,14 +24,14 @@
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
-  width: 200px; /* Largura uniforme */
-  text-align: center; /* Centraliza o texto dentro do botão */
+  width: 100%; /* Button width adjusts to the grid */
+  text-align: center; /* Centers text inside the button */
   transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .tag-b:hover {
   background: linear-gradient(to right, #14A586F7, #3ad5b4f7);
-  transform: scale(1.05); /* Efeito de zoom no hover */
+  transform: scale(1.05); /* Slight zoom effect on hover */
 }
 
 /* Container Geral */
@@ -35,9 +42,39 @@
   text-align: center;
 }
 
-/* Container de Texto */
-.text-container {
-  margin: 20px 0;
+/* Dificuldades */
+.Dificuldade {
+  display: flex;
+  flex-direction: row; /* Horizontal layout for difficulty buttons */
+  justify-content: space-around; /* Spaced evenly */
+  gap: 10px; /* Spacing between buttons */
+  margin-top: 0px;
+}
+
+/* Botões de Dificuldade */
+.nivel-i,
+.nivel-m,
+.nivel-a {
+  flex: 1; /* Equal width for all buttons */
+  max-width: 150px; /* Sets a consistent max width */
+  height: 60px; /* Uniform height */
+  background-color: #14A586F7;
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.nivel-i:hover,
+.nivel-m:hover,
+.nivel-a:hover {
+  background: linear-gradient(to right, #14A586F7, #3ad5b4f7);
+  transform: scale(1.05); /* Slight zoom effect on hover */
 }
 
 /* Navegação */
@@ -56,53 +93,4 @@
 .navigation-buttons button:disabled {
   cursor: not-allowed;
   opacity: 0.5;
-}
-
-/* Dificuldades */
-.Dificuldade {
-  display: flex;
-  flex-direction: column; /* Organiza os botões verticalmente */
-  align-items: center; /* Centraliza os botões horizontalmente */
-  gap: 20px; /* Espaçamento maior entre os botões */
-  margin-top: 20px;
-}
-
-/* Botões de Dificuldade */
-.nivel-i,
-.nivel-m {
-  width: 500px; /* Largura padrão */
-  height: 100px; /* Altura menor */
-  background-color: #14A586F7;
-  font-weight: bold;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  font-size: 16px; /* Tamanho da fonte */
-  cursor: pointer;
-  text-align: center;
-  transition: background 0.3s ease, transform 0.2s ease;
-}
-
-.nivel-a {
-  width: 500px; /* Maior largura para destacar */
-  height: 100px; /* Altura igual para uniformidade */
-  background-color: #14A586F7;
-  font-weight: bold;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  font-size: 16px; /* Tamanho da fonte */
-  cursor: pointer;
-  text-align: center;
-  transition: background 0.3s ease, transform 0.2s ease;
-}
-
-/* Hover para os Níveis */
-.nivel-i:hover,
-.nivel-m:hover,
-.nivel-a:hover {
-  background: linear-gradient(to right, #14A586F7, #3ad5b4f7);
-  transform: scale(1.05); /* Efeito de zoom no hover */
 }
