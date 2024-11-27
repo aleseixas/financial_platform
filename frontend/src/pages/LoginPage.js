@@ -42,7 +42,7 @@ const Login = () => {
     }
 
     // if there are no errors we redirect to this page
-    navigate('/profile');
+    navigate('/home');
   };
 
   return (
@@ -82,14 +82,14 @@ const Login = () => {
           className={'botaoEntrar'}   
         />
 
-        <DivAlinhamentoCentro 
+        {/* <DivAlinhamentoCentro 
           reactComponentToBeAligned={
           <Button // imlementar onClick para enviar ele à página de recuperação de senha
           placeholder={'Esqueceu a senha?'}
           className={'botaoEsqueceuSenha'}
           />
           }
-        />
+        /> */}
 
         <DivAlinhamentoCentro 
           reactComponentToBeAligned={

@@ -1,3 +1,12 @@
+.logoutLink {
+    float: right;
+    text-decoration: none;
+}
+.logout {
+    width: 100%;
+    padding-right: 20px;
+}
+
 li {
     float: left;
     border-right: 2px solid #bbb;

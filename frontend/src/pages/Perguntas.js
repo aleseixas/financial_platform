@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import '../styles/perguntas.css';
 import Button from '../components/Button';
 import perguntasData from '../Resources/perguntas.json'; 
+import Navbar from '../components/Navbar';
 
 let soma_total = 0;
 let alternativa_atual = 0;
@@ -36,6 +37,8 @@ const Perguntas = () => {
     };
 
     return (
+        <>
+        <Navbar/>
         <div className="container">
             <div className="question-box">
                 <p className="question">
@@ -73,6 +76,7 @@ const Perguntas = () => {
                 <Button onClick={handleClick} placeholder={i === perguntasData.length - 1 ? "Finalizar" : "Continuar"} className={"continue-button"} />
             </div>
         </div>
+        </>
     );
 };
 

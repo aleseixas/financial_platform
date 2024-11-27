@@ -12,6 +12,8 @@ import Cursos from './pages/Cursos';
 import Leitura from './pages/Leitura';
 import QuantBot from './pages/QuantBot';
 import Noticias from './pages/Noticias';
+import TagsLeitura from './pages/TagsLeitura';
+import Descricoes from './pages/Descricoes';
 
 import {
   createBrowserRouter,
@@ -61,11 +63,19 @@ const router = createBrowserRouter([
   },
   {
     path: '/leitura',
-    element : <Leitura />
+    element : <TagsLeitura />
+  },
+  {
+    path: '/textos',
+    element: <Leitura/>
   },
   {
     path: '/quantbot',
     element : <QuantBot />
+  },
+  {
+    path: '/descricoes',
+    element : <Descricoes/>
   }
 ]);
 

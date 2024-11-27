@@ -201,5 +201,15 @@ async def quiz_result(user: UserQuizResult):
 @app.post("/api/simulateStrategy")
 async def simulateStrategy(ticker: Ticker):
     simulatedResult = applyStrategy([ticker.tickerName])[0]
+    rawReturn = simulatedResult['Returns'].to_list()
     simulatedResult = simulatedResult['Total Return'].to_list()
-    return {'values': simulatedResult}
+    return {
+        'values': simulatedResult,
+        'returns': rawReturn
+    }
+        
+@app.get("/api/logout")
+async def logout():
+    global authenticated_user_email
+    authenticated_user_email = None
+    return {"message": "User logged out successfully!"}        
