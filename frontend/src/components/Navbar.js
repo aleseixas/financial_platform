@@ -1,6 +1,6 @@
 import React from 'react'
 import logosymbol from '../Resources/logosymbol.png'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import '../styles/navbar.css'
 
 const navigationBar = [
@@ -59,6 +59,7 @@ const navigationBar = [
 ]
 
 const Navbar = () => {
+  const navigate = useNavigate();
   const handleClick = async () => {
     try {
       const response = await fetch('http://localhost:8000/api/logout', {
@@ -74,6 +75,8 @@ const Navbar = () => {
 
       const data = await response.json();
       console.log(data);
+      navigate('/login');
+
     } catch (error) {
       console.error('There was a problem with the fetch operation:', error);
     }
