@@ -110,7 +110,7 @@ const Cadastro = () => {
           
           <Button
             handleSubmit={handleSubmit}
-            placeholder={'Cadastra-se'}
+            placeholder={'Cadastre-se'}
             className={'submit-btn'}   
           />
         </form>
