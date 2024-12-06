@@ -4,6 +4,11 @@ import '@testing-library/jest-dom/extend-expect';
 import { MemoryRouter } from 'react-router-dom';
 import Perguntas, { getSomaTotal, setSomaTotal } from '../pages/Perguntas'; // Adjust the import path as necessary
 
+// This section creates a automated test for the Perguntas page
+// The test checks if the total sum is calculated correctly
+// Note that it only uses equivalence partitioning to test the sum calculation
+// There is no need for boundary value analysis since the sum is calculated only by adding the values of the selected alternatives
+
 test('calculates total correctly after selecting the first alternative for each question', () => {
   render(
     <MemoryRouter>
