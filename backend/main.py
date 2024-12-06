@@ -24,7 +24,7 @@ def init_db():
     cursor.execute('''CREATE TABLE IF NOT EXISTS users (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         username TEXT,
-        email TEXT,
+        email TEXT UNIQUE,
         password TEXT,
         birthDay TEXT,
         birthMonth TEXT,
@@ -95,6 +95,16 @@ async def register(user: UserRegister):
     global authenticated_user_email
     authenticated_user_email = user.email  # Automatically log in the user after registration
     return {"message": "User registered successfully!"}
+
+# Remove user from database
+@app.post("/api/removeuser")
+async def remove_user(user: UserLogin):
+    conn = sqlite3.connect('users.db')
+    cursor = conn.cursor()
+    cursor.execute("DELETE FROM users WHERE email = ?", (user.email,))
+    conn.commit()
+    conn.close()
+    return {"message": "User removed successfully!"}
 
 # Login route
 @app.post("/api/login")
@@ -212,4 +222,4 @@ async def simulateStrategy(ticker: Ticker):
 async def logout():
     global authenticated_user_email
     authenticated_user_email = None
-    return {"message": "User logged out successfully!"}        
+    return {"message": "User logged out successfully!"}
