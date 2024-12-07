@@ -41,6 +41,10 @@ def getReturns(stocks: List):
   return stocks
 
 def getTotalReturn(stocks: List):
+
+  """
+  
+  """
   for stock in stocks:
     stock['Total Return'] = 100 * (stock['Strategy Return'].cumsum())
 
