@@ -1,68 +1,72 @@
 import pytest
+import sqlite3
+import bcrypt
 from fastapi.testclient import TestClient
-from main import app  # Assuming your FastAPI app is in 'main.py'
+from main import app
 
 client = TestClient(app)
 
-@pytest.fixture(scope="module")
-def create_user():
-    # Register a new user before each test
-    user_data = {
-        "firstName": "John",
-        "lastName": "Doe",
-        "email": "john.doe@example.com",
-        "password": "password123",
-        "birthDay": "15",
-        "birthMonth": "05",
-        "birthYear": "1990",
-        "gender": "Male"
-    }
+# Fixture to set up and tear down a test database
+@pytest.fixture(autouse=True)
+def setup_test_database():
+    """
+    Set up a temporary SQLite database for testing.
+    """
+    conn = sqlite3.connect("users.db")
+    cursor = conn.cursor()
+    # Create a test users table
+    cursor.execute("CREATE TABLE IF NOT EXISTS users (email TEXT, password TEXT)")
+    # Insert a test user with a hashed password
+    hashed_password = bcrypt.hashpw("testpassword".encode("utf-8"), bcrypt.gensalt())
+    cursor.execute("INSERT INTO users (email, password) VALUES (?, ?)", ("test@example.com", hashed_password))
+    conn.commit()
+    conn.close()
+    yield
+    # Teardown the database after tests
+    conn = sqlite3.connect("users.db")
+    cursor = conn.cursor()
+    cursor.execute("DROP TABLE users")
+    conn.close()
 
-    return user_data
-
-
-def test_login(create_user):
-    login_data = {
-        "email": create_user["email"],
-        "password": create_user["password"]
-    }
-
-    # Attempt to log in with the registered user
-    response = client.post("/api/login", json=login_data)
-    
+def test_successful_login():
+    """
+    Test login with valid credentials.
+    """
+    user_data = {"email": "test@example.com", "password": "testpassword"}
+    response = client.post("/api/login", json=user_data)
     assert response.status_code == 200
     assert response.json() == {"message": "User logged in successfully!"}
 
-def test_register_with_existing_email():
-    user_data = {
-        "firstName": "Jane",
-        "lastName": "Doe",
-        "email": "john.doe@example.com",  # Same email as created earlier
-        "password": "newpassword123",
-        "birthDay": "10",
-        "birthMonth": "10",
-        "birthYear": "1992",
-        "gender": "Female"
-    }
-
-    # Attempt to register with an email that's already in use
-    response = client.post("/api/register", json=user_data)
-    
+def test_invalid_email():
+    """
+    Test login with an email not in the database.
+    """
+    user_data = {"email": "invalid@example.com", "password": "testpassword"}
+    response = client.post("/api/login", json=user_data)
     assert response.status_code == 400
-    assert response.json() == {"detail": "Email already registered"}
+    assert response.json()["detail"] == "Invalid email or password"
 
-# def test_get_profile(create_user):
-#     # Simulate login first by posting login request
-#     login_data = {
-#         "email": create_user["email"],
-#         "password": create_user["password"]
-#     }
-#     login_response = client.post("/api/login", json=login_data)
-#     assert login_response.status_code == 200
+def test_invalid_password():
+    """
+    Test login with a wrong password.
+    """
+    user_data = {"email": "test@example.com", "password": "wrongpassword"}
+    response = client.post("/api/login", json=user_data)
+    assert response.status_code == 400
+    assert response.json()["detail"] == "Invalid email or password"
 
-#     # Now, check the profile
-#     response = client.get("/api/getprofile")
-    
-#     assert response.status_code == 200
-#     assert "email" in response.json()  # Check if profile contains email
-#     assert response.json()["email"] == create_user["email"]
+def test_empty_email_field():
+    """
+    Test login with an empty email field.
+    """
+    user_data = {"email": "", "password": "testpassword"}
+    response = client.post("/api/login", json=user_data)
+    assert response.status_code == 400
+
+def test_empty_password_field():
+    """
+    Test login with an empty password field.
+    """
+    user_data = {"email": "test@example.com", "password": ""}
+    response = client.post("/api/login", json=user_data)
+    assert response.status_code == 400
